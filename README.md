@@ -1,7 +1,7 @@
 # Scroosher - Open Source procedual space shooter
  Infinite space exploration with a twist. 
  
- _Note from the developer: This game was made by Jesper Eggers in 2020. Today, i would code many things different and focus on my commercial Everplant-launch (which might be open sourced when its there is no interest on it on the market anymore). But perhabs, this is what some people helps with their own projects. Feel free to ask me questions on Twitter (@TakeLime) ^^_
+ _Note from the developer: This game was made by Jesper Eggers in 2020. Today, i would code many things differently and focus on my commercial Everplant-launch (which might be open sourced when there is no interest on it on the market anymore). But perhabs, Scrooshers source code is what some people helps with their own projects. Feel free to ask me questions on Twitter (@TakeLime) ^^_
  
  
  **Explorer an infinite world**
