@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Map.gd" type="Script" id=1]
 [ext_resource path="res://Interface.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Textures/Planets/Planets.tres" type="TileSet" id=4]
 [ext_resource path="res://Textures/Astroids/Asteroids.tres" type="TileSet" id=5]
+[ext_resource path="res://Textures/Backgrounds/ParralaxBackground.jpg" type="Texture" id=6]
 [ext_resource path="res://Space.gd" type="Script" id=20]
 [ext_resource path="res://Textures/UI/Context/Land.png" type="Texture" id=21]
 
@@ -18,10 +19,22 @@ layer = -1
 modulate = Color( 0.741176, 0.741176, 0.741176, 1 )
 anchor_right = 1.0
 anchor_bottom = 1.0
-color = Color( 0.0666667, 0.0196078, 0.203922, 1 )
+color = Color( 0.0352941, 0.00392157, 0.121569, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+layer = -1
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2( 1041.7, 609 )
+
+[node name="Space" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+modulate = Color( 0.964706, 1, 0, 0.105882 )
+position = Vector2( 512.25, 299.298 )
+scale = Vector2( 0.406949, 0.380876 )
+texture = ExtResource( 6 )
 
 [node name="Map" type="Navigation2D" parent="."]
 script = ExtResource( 1 )
@@ -54,9 +67,6 @@ color = Color( 0, 0, 0, 1 )
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
 
-[node name="Starter" parent="Player/Texture/Ships" index="0"]
-frame = 1
-
 [node name="Norman" parent="Player/Texture/Players" index="0"]
 frame = 2
 
@@ -71,12 +81,11 @@ autostart = true
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="Interface" parent="UI" instance=ExtResource( 2 )]
+margin_top = 0.0
+margin_bottom = 0.0
 
 [node name="Pause" parent="UI/Interface" index="0"]
-anchor_left = 0.461
 anchor_right = 0.531
-anchor_bottom = 0.078
-margin_left = -0.0640259
 margin_right = 0.255981
 margin_bottom = -4.956
 [connection signal="CurrentPlanetChanged" from="." to="Map" method="_on_Space_CurrentPlanetChanged"]

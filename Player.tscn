@@ -43,14 +43,14 @@ animations = [ {
 "name": "Down",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 12 ), ExtResource( 11 ), ExtResource( 10 ) ],
-"loop": true,
-"name": "Right",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 7 ) ],
 "loop": true,
 "name": "Left",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 12 ), ExtResource( 11 ), ExtResource( 10 ) ],
+"loop": true,
+"name": "Right",
 "speed": 5.0
 } ]
 
@@ -66,14 +66,14 @@ animations = [ {
 "name": "Down",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 18 ), ExtResource( 19 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ],
-"loop": true,
-"name": "Right",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 20 ), ExtResource( 21 ), ExtResource( 20 ), ExtResource( 20 ), ExtResource( 20 ), ExtResource( 20 ), ExtResource( 20 ) ],
 "loop": true,
 "name": "Left",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 18 ), ExtResource( 19 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ],
+"loop": true,
+"name": "Right",
 "speed": 5.0
 } ]
 
@@ -84,7 +84,7 @@ script = ExtResource( 13 )
 
 [node name="View" type="Camera2D" parent="."]
 current = true
-zoom = Vector2( 0.18, 0.18 )
+zoom = Vector2( 0.3, 0.3 )
 
 [node name="Collision" type="CollisionShape2D" parent="."]
 position = Vector2( 0.210228, 0.105114 )
@@ -98,6 +98,7 @@ shape = SubResource( 1 )
 visible = false
 frames = SubResource( 2 )
 animation = "Top"
+frame = 2
 playing = true
 
 [node name="Players" type="Node2D" parent="Texture"]
@@ -106,7 +107,7 @@ playing = true
 visible = false
 frames = SubResource( 3 )
 animation = "Down"
-frame = 3
+frame = 6
 playing = true
 
 [node name="Light" type="Light2D" parent="."]

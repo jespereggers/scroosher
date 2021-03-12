@@ -9,9 +9,6 @@
 [ext_resource path="res://Textures/UI/New/1.png" type="Texture" id=7]
 [ext_resource path="res://Textures/UI/New/2.png" type="Texture" id=8]
 [ext_resource path="res://Start.gd" type="Script" id=9]
-[ext_resource path="res://Textures/UI/Close/0.png" type="Texture" id=10]
-[ext_resource path="res://Textures/UI/Close/1.png" type="Texture" id=11]
-[ext_resource path="res://Textures/UI/Close/2.png" type="Texture" id=12]
 [ext_resource path="res://Textures/Icons/OrbisMini.png" type="Texture" id=13]
 [ext_resource path="res://Textures/Icons/PalosMini.png" type="Texture" id=14]
 [ext_resource path="res://Textures/Icons/ArmeniaMini.png" type="Texture" id=15]
@@ -19,6 +16,7 @@
 [ext_resource path="res://Textures/Icons/YouTube/2.png" type="Texture" id=17]
 [ext_resource path="res://Textures/Icons/YouTube/1.png" type="Texture" id=18]
 [ext_resource path="res://Textures/Icons/YouTube/0.png" type="Texture" id=19]
+[ext_resource path="res://Textures/Backgrounds/ParralaxBackground.jpg" type="Texture" id=20]
 
 [sub_resource type="DynamicFont" id=1]
 size = 64
@@ -28,10 +26,26 @@ font_data = ExtResource( 1 )
 extra_spacing_char = 5
 font_data = ExtResource( 1 )
 
-[node name="Start" type="Node2D"]
+[sub_resource type="DynamicFont" id=3]
+size = 32
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 32
+outline_size = 2
+outline_color = Color( 0, 0, 0, 0.529412 )
+font_data = ExtResource( 1 )
+
+[node name="Start" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
 script = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Background" type="CanvasLayer" parent="."]
+layer = 0
 
 [node name="Color" type="ColorRect" parent="Background"]
 anchor_right = 1.0
@@ -41,12 +55,24 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="TextureRect" type="TextureRect" parent="Background"]
+modulate = Color( 0.988235, 0.811765, 0.00784314, 0.286275 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 20 )
+expand = true
+stretch_mode = 7
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="Title" type="Label" parent="UI"]
 anchor_right = 1.0
+anchor_bottom = 1.0
 margin_right = -1.0
-margin_bottom = 120.0
+margin_bottom = -480.0
 rect_min_size = Vector2( 0, 120 )
 custom_fonts/font = SubResource( 1 )
 text = "Scroosher"
@@ -57,14 +83,12 @@ __meta__ = {
 }
 
 [node name="Orbis" type="TextureRect" parent="UI"]
-anchor_left = 1.0
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-margin_left = -149.389
-margin_top = -162.868
-margin_right = -49.3887
-margin_bottom = -62.8676
+anchor_right = 0.99
+anchor_bottom = 1.0
+margin_left = 874.611
+margin_top = 137.132
+margin_right = -39.1487
+margin_bottom = -362.868
 rect_min_size = Vector2( 100, 100 )
 texture = ExtResource( 13 )
 expand = true
@@ -73,14 +97,12 @@ __meta__ = {
 }
 
 [node name="Palos" type="TextureRect" parent="UI"]
-anchor_left = 1.0
-anchor_top = 0.5
 anchor_right = 1.0
-anchor_bottom = 0.5
-margin_left = -379.389
-margin_top = -94.868
+anchor_bottom = 1.0
+margin_left = 644.611
+margin_top = 205.132
 margin_right = -279.389
-margin_bottom = 5.13239
+margin_bottom = -294.868
 rect_min_size = Vector2( 100, 100 )
 texture = ExtResource( 14 )
 expand = true
@@ -89,14 +111,12 @@ __meta__ = {
 }
 
 [node name="Armenia" type="TextureRect" parent="UI"]
-anchor_left = 1.0
-anchor_top = 0.5
 anchor_right = 1.0
-anchor_bottom = 0.5
-margin_left = -196.389
-margin_top = 121.132
+anchor_bottom = 1.0
+margin_left = 827.611
+margin_top = 421.132
 margin_right = -96.3887
-margin_bottom = 221.132
+margin_bottom = -78.868
 rect_min_size = Vector2( 100, 100 )
 texture = ExtResource( 15 )
 expand = true
@@ -105,14 +125,12 @@ __meta__ = {
 }
 
 [node name="Logo" type="TextureRect" parent="UI"]
-anchor_left = 1.0
-anchor_top = 0.5
 anchor_right = 1.0
-anchor_bottom = 0.5
-margin_left = -329.0
-margin_top = -172.5
-margin_right = -12.0
-margin_bottom = 172.5
+anchor_bottom = 1.0
+margin_left = 696.123
+margin_top = 127.5
+margin_right = -10.8774
+margin_bottom = -127.5
 texture = ExtResource( 2 )
 expand = true
 __meta__ = {
@@ -120,12 +138,12 @@ __meta__ = {
 }
 
 [node name="Start" type="TextureButton" parent="UI"]
-anchor_top = 0.5
-anchor_bottom = 0.5
+anchor_right = 1.0
+anchor_bottom = 1.0
 margin_left = 20.0
-margin_top = -142.0
-margin_right = 386.0
-margin_bottom = -7.0
+margin_top = 158.0
+margin_right = -638.0
+margin_bottom = -307.0
 texture_normal = ExtResource( 4 )
 texture_pressed = ExtResource( 5 )
 texture_hover = ExtResource( 3 )
@@ -135,12 +153,12 @@ __meta__ = {
 }
 
 [node name="Planet" type="TextureRect" parent="UI"]
-anchor_top = 0.5
-anchor_bottom = 0.5
+anchor_right = 1.0
+anchor_bottom = 1.0
 margin_left = 410.0
-margin_top = -142.0
-margin_right = 545.0
-margin_bottom = -7.0
+margin_top = 158.0
+margin_right = -479.0
+margin_bottom = -307.0
 rect_min_size = Vector2( 135, 135 )
 texture = ExtResource( 16 )
 expand = true
@@ -149,12 +167,12 @@ __meta__ = {
 }
 
 [node name="YouTube" type="TextureButton" parent="UI"]
-anchor_top = 0.5
-anchor_bottom = 0.5
+anchor_right = 1.0
+anchor_bottom = 1.0
 margin_left = 410.0
-margin_top = 20.0
-margin_right = 545.0
-margin_bottom = 155.0
+margin_top = 320.0
+margin_right = -479.0
+margin_bottom = -145.0
 rect_min_size = Vector2( 135, 135 )
 texture_normal = ExtResource( 19 )
 texture_pressed = ExtResource( 17 )
@@ -165,12 +183,12 @@ __meta__ = {
 }
 
 [node name="New" type="TextureButton" parent="UI"]
-anchor_top = 0.5
-anchor_bottom = 0.5
+anchor_right = 1.0
+anchor_bottom = 1.0
 margin_left = 24.0
-margin_top = 21.0
-margin_right = 388.0
-margin_bottom = 157.0
+margin_top = 321.0
+margin_right = -636.0
+margin_bottom = -143.0
 texture_normal = ExtResource( 6 )
 texture_pressed = ExtResource( 8 )
 texture_hover = ExtResource( 7 )
@@ -180,31 +198,50 @@ __meta__ = {
 }
 
 [node name="Credits" type="Label" parent="UI"]
-anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_top = -27.0
+margin_left = 4.0
+margin_top = 573.0
 margin_right = -8.0
 margin_bottom = -7.0
 custom_fonts/font = SubResource( 2 )
-text = "TakeLime - Collab Jam Submission"
+text = "TakeLime (2020) - Collab Jam Submission"
 align = 1
 valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Close" type="TextureButton" parent="UI"]
-anchor_left = 1.0
+[node name="Close" type="Button" parent="UI"]
 anchor_right = 1.0
-margin_left = -69.0
-margin_top = 8.0
-margin_right = -9.0
-margin_bottom = 68.0
-texture_normal = ExtResource( 10 )
-texture_pressed = ExtResource( 12 )
-texture_hover = ExtResource( 11 )
-expand = true
+anchor_bottom = 1.0
+margin_left = 887.0
+margin_bottom = -543.0
+focus_mode = 0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 0.831373, 0.584314, 0, 1 )
+custom_colors/font_color_pressed = Color( 1, 0.270588, 0.270588, 1 )
+enabled_focus_mode = 0
+text = "Close"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DisableAudio" type="Button" parent="UI"]
+anchor_right = 0.992
+anchor_bottom = 1.0
+margin_right = -856.808
+margin_bottom = -537.0
+focus_mode = 0
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 1, 0.176471, 0.176471, 1 )
+toggle_mode = true
+enabled_focus_mode = 0
+text = "Audio"
+flat = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -212,3 +249,4 @@ __meta__ = {
 [connection signal="pressed" from="UI/YouTube" to="." method="_on_YouTube_pressed"]
 [connection signal="pressed" from="UI/New" to="." method="_on_New_pressed"]
 [connection signal="pressed" from="UI/Close" to="." method="_on_Close_pressed"]
+[connection signal="toggled" from="UI/DisableAudio" to="." method="_on_DisableAudio_toggled"]

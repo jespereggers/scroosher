@@ -1,4 +1,4 @@
-extends Node2D
+extends Control
 
 func _ready():
 	if File.new().file_exists("user://Save.sc"):
@@ -46,4 +46,8 @@ func GetScene():
 	return "res://" + Data.Properties[content["LandingInfo"]["Planet"]]["Type"] + ".tscn"
 
 func _on_YouTube_pressed():
-	OS.shell_open("https://www.youtube.com/channel/UCdTlz5pCHBUivLIz9cfvWWw?view_as=subscriber")
+	OS.shell_open("https://www.youtube.com/TakeLime")
+
+
+func _on_DisableAudio_toggled(button_pressed):
+	Audio.get_node("Theme").stream_paused = button_pressed

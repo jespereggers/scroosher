@@ -32,6 +32,7 @@ Audio="*res://Audio.tscn"
 window/per_pixel_transparency/allowed=true
 window/per_pixel_transparency/enabled=true
 mouse_cursor/custom_image="res://Textures/UI/Mouse.png"
+window/stretch/mode="viewport"
 
 [input]
 
