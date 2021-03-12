@@ -1,0 +1,294 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://Textures/UI/Pause/Pause2.png" type="Texture" id=1]
+[ext_resource path="res://Textures/UI/Pause/Pause1.png" type="Texture" id=2]
+[ext_resource path="res://Textures/UI/Pause/Pause0.png" type="Texture" id=3]
+[ext_resource path="res://Textures/UI/Counter/Diamond/Diamond.png" type="Texture" id=4]
+[ext_resource path="res://Textures/UI/Counter/Glass/Glass.png" type="Texture" id=5]
+[ext_resource path="res://Textures/UI/Counter/Stone/Stone.png" type="Texture" id=6]
+[ext_resource path="res://Textures/UI/Counter/Energy/Energy.png" type="Texture" id=7]
+[ext_resource path="res://Fonts/Font.ttf" type="DynamicFontData" id=8]
+[ext_resource path="res://Interface.gd" type="Script" id=9]
+[ext_resource path="res://Textures/Icons/Space.png" type="Texture" id=10]
+[ext_resource path="res://Textures/UI/Back/1.png" type="Texture" id=11]
+[ext_resource path="res://Textures/UI/Back/2.png" type="Texture" id=12]
+[ext_resource path="res://Textures/UI/Continue/0.png" type="Texture" id=13]
+[ext_resource path="res://Textures/UI/Continue/1.png" type="Texture" id=14]
+[ext_resource path="res://Textures/UI/Back/0.png" type="Texture" id=15]
+[ext_resource path="res://Textures/UI/Continue/2.png" type="Texture" id=16]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 8 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 75
+outline_color = Color( 0.188235, 0.188235, 0.188235, 1 )
+font_data = ExtResource( 8 )
+
+[node name="Interface" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -1.0
+margin_bottom = 1.0
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Pause" type="TextureButton" parent="."]
+anchor_left = 0.461
+anchor_top = 0.008
+anchor_right = 0.536
+anchor_bottom = 0.078
+margin_left = -0.0640259
+margin_top = 0.184
+margin_right = -4.86401
+margin_bottom = 0.0439987
+rect_min_size = Vector2( 72, 42 )
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 1 )
+texture_hover = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RightCounter" type="HBoxContainer" parent="."]
+anchor_left = 0.957
+anchor_right = 1.0
+margin_left = -463.0
+margin_top = 5.0
+margin_right = -5.0
+margin_bottom = 47.0
+rect_min_size = Vector2( 475, 42 )
+custom_constants/separation = 10
+alignment = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Diamonds" type="TextureRect" parent="RightCounter"]
+margin_left = 176.0
+margin_right = 278.0
+margin_bottom = 42.0
+rect_min_size = Vector2( 102, 42 )
+texture = ExtResource( 4 )
+expand = true
+
+[node name="Count" type="Label" parent="RightCounter/Diamonds"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -15.0
+margin_bottom = -3.8147e-06
+custom_fonts/font = SubResource( 1 )
+text = "0"
+align = 2
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Glass" type="TextureRect" parent="RightCounter"]
+margin_left = 288.0
+margin_right = 390.0
+margin_bottom = 42.0
+rect_min_size = Vector2( 102, 42 )
+texture = ExtResource( 5 )
+expand = true
+
+[node name="Count" type="Label" parent="RightCounter/Glass"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -15.0
+custom_fonts/font = SubResource( 1 )
+text = "0"
+align = 2
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Stone" type="TextureRect" parent="RightCounter"]
+margin_left = 400.0
+margin_right = 502.0
+margin_bottom = 42.0
+rect_min_size = Vector2( 102, 42 )
+texture = ExtResource( 6 )
+expand = true
+
+[node name="Count" type="Label" parent="RightCounter/Stone"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -15.0
+custom_fonts/font = SubResource( 1 )
+text = "0"
+align = 2
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LeftCounter" type="HBoxContainer" parent="."]
+margin_left = 5.0
+margin_top = 5.0
+margin_right = 502.032
+margin_bottom = 45.0
+rect_min_size = Vector2( 475, 42 )
+custom_constants/separation = 10
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Energy" type="TextureRect" parent="LeftCounter"]
+margin_right = 102.0
+margin_bottom = 45.0
+rect_min_size = Vector2( 102, 45 )
+texture = ExtResource( 7 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Count" type="Label" parent="LeftCounter/Energy"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -15.0
+margin_bottom = -3.8147e-06
+custom_fonts/font = SubResource( 1 )
+text = "100"
+align = 2
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Icon" type="TextureRect" parent="LeftCounter"]
+margin_left = 112.0
+margin_right = 254.0
+margin_bottom = 45.0
+rect_min_size = Vector2( 142, 42 )
+texture = ExtResource( 10 )
+expand = true
+
+[node name="SubstractHealth" type="Timer" parent="."]
+wait_time = 15.0
+autostart = true
+
+[node name="PauseMenu" type="Popup" parent="."]
+pause_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="PauseMenu"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -2.0
+margin_bottom = 1.0
+color = Color( 0, 0, 0, 0.392157 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Back" type="TextureButton" parent="PauseMenu"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -273.528
+margin_top = -58.0561
+margin_right = -193.528
+margin_bottom = -18.0561
+rect_min_size = Vector2( 80, 40 )
+rect_scale = Vector2( 3, 3 )
+texture_normal = ExtResource( 13 )
+texture_pressed = ExtResource( 16 )
+texture_hover = ExtResource( 14 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="TextureButton" parent="PauseMenu"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 40.4719
+margin_top = -58.0561
+margin_right = 120.472
+margin_bottom = -18.0561
+rect_min_size = Vector2( 80, 40 )
+rect_scale = Vector2( 3, 3 )
+texture_normal = ExtResource( 15 )
+texture_pressed = ExtResource( 12 )
+texture_hover = ExtResource( 11 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GameOver" type="Popup" parent="."]
+pause_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="GameOver"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -2.0
+margin_bottom = 1.0
+color = Color( 0, 0, 0, 0.392157 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GameOver" type="TextureButton" parent="GameOver"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -117.0
+margin_top = 28.0
+margin_right = -37.0
+margin_bottom = 68.0
+rect_min_size = Vector2( 80, 40 )
+rect_scale = Vector2( 3, 3 )
+texture_normal = ExtResource( 15 )
+texture_pressed = ExtResource( 12 )
+texture_hover = ExtResource( 11 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Text" type="Label" parent="GameOver"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -233.5
+margin_top = -131.5
+margin_right = 233.5
+margin_bottom = -36.5
+custom_fonts/font = SubResource( 2 )
+text = "Game Over"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+[connection signal="pressed" from="Pause" to="." method="_on_Pause_pressed"]
+[connection signal="timeout" from="SubstractHealth" to="." method="_on_SubstractHealth_timeout"]
+[connection signal="pressed" from="PauseMenu/Back" to="." method="_on_Back_pressed"]
+[connection signal="pressed" from="PauseMenu/Title" to="." method="_on_Title_pressed"]
+[connection signal="pressed" from="GameOver/GameOver" to="." method="_on_GameOver_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

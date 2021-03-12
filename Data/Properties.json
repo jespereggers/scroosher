@@ -1,0 +1,47 @@
+{
+    "Metroid0" : {
+        "Type" : "Metroid"
+    },
+    "Metroid1" : {
+        "Type" : "Metroid"
+    },
+    "Metroid2" : {
+        "Type" : "Metroid"
+    },
+    "Star0" : {
+        "Type" : "Star"
+    },
+    "Star1" : {
+        "Type" : "Star"
+    },
+    "Star2" : {
+        "Type" : "Star"
+    },
+    "Armenia0" : {
+        "Type" : "Armenia"
+    },
+    "Armenia1" : {
+        "Type" : "Armenia"
+    },
+    "Armenia2" : {
+        "Type" : "Armenia"
+    },
+    "Orbis0" : {
+        "Type" : "Orbis"
+    },
+    "Orbis1" : {
+        "Type" : "Orbis"
+    },
+    "Orbis2" : {
+        "Type" : "Orbis"
+    },
+    "Palos0" : {
+        "Type" : "Palos"
+    },
+    "Palos1" : {
+        "Type" : "Palos"
+    },
+    "Palos2" : {
+        "Type" : "Palos"
+    }
+}

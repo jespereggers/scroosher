@@ -1,0 +1,80 @@
+{
+    "Metroid" : {
+        "Light" : false,
+        "Health" : 30,
+        "Loot": {
+            "Stone" : {
+                "max" : 10,
+                "min" : 1
+            },
+            "Energy" : {
+                "max" : 25,
+                "min" : 5
+            }
+        }
+    },
+    "Star" : {
+        "Light" : true,
+        "Health" : 30,
+        "Loot": {
+            "Stone" : {
+                "max" : 5,
+                "min" : 1
+            },
+            "Energy" : {
+                "max" : 50,
+                "min" : 15
+            }
+        }
+    },
+    "Armenia" : {
+        "Light" : false,
+        "Health" : 100,
+        "Loot": {
+            "Diamonds" : {
+                "max" : 5,
+                "min" : 1
+            },
+            "Energy" : {
+                "max" : 10,
+                "min" : 1
+            }
+        }
+    },
+    "Orbis" : {
+        "Light" : false,
+        "Health" : 100,
+        "Loot": {
+            "Stone" : {
+                "max" : 25,
+                "min" : 5
+            },
+            "Diamonds" : {
+                "max" : 8,
+                "min" : 4
+            },
+            "Energy" : {
+                "max" : 20,
+                "min" : 5
+            }
+        }
+    },
+    "Palos" : {
+        "Light" : false,
+        "Health" : 80,
+        "Loot": {
+            "Glass" : {
+                "max" : 10,
+                "min" : 1
+            },
+            "Diamonds" : {
+                "max" : 2,
+                "min" : 1
+            },
+            "Energy" : {
+                "max" : 5,
+                "min" : 1
+            }
+        }
+    }
+}

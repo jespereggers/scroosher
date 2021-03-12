@@ -1,0 +1,93 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Map.gd" type="Script" id=1]
+[ext_resource path="res://Interface.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Textures/Planets/Planets.tres" type="TileSet" id=4]
+[ext_resource path="res://Textures/Astroids/Asteroids.tres" type="TileSet" id=5]
+[ext_resource path="res://Space.gd" type="Script" id=20]
+[ext_resource path="res://Textures/UI/Context/Land.png" type="Texture" id=21]
+
+[node name="Space" type="Node2D"]
+script = ExtResource( 20 )
+
+[node name="Background" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="Color" type="ColorRect" parent="Background"]
+modulate = Color( 0.741176, 0.741176, 0.741176, 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.0666667, 0.0196078, 0.203922, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Map" type="Navigation2D" parent="."]
+script = ExtResource( 1 )
+
+[node name="Reload" type="Timer" parent="Map"]
+wait_time = 0.1
+autostart = true
+
+[node name="Asteroids" type="TileMap" parent="Map"]
+tile_set = ExtResource( 5 )
+cell_size = Vector2( 16, 16 )
+format = 1
+
+[node name="Planets" type="TileMap" parent="Map"]
+tile_set = ExtResource( 4 )
+cell_size = Vector2( 32, 32 )
+cell_quadrant_size = 32
+format = 1
+tile_data = PoolIntArray( -2, 0, 0, -65535, 0, 0, 65533, 0, 0 )
+
+[node name="Land" type="Sprite" parent="Map"]
+visible = false
+position = Vector2( -0.375067, 0.127084 )
+scale = Vector2( 0.638291, 0.609115 )
+z_index = 1
+texture = ExtResource( 21 )
+
+[node name="Night" type="CanvasModulate" parent="Map"]
+color = Color( 0, 0, 0, 1 )
+
+[node name="Player" parent="." instance=ExtResource( 3 )]
+
+[node name="Starter" parent="Player/Texture/Ships" index="0"]
+frame = 1
+
+[node name="Norman" parent="Player/Texture/Players" index="0"]
+frame = 2
+
+[node name="Line" type="Line2D" parent="."]
+visible = false
+points = PoolVector2Array( 68.3623, 33.0362 )
+
+[node name="Ticks" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="Interface" parent="UI" instance=ExtResource( 2 )]
+
+[node name="Pause" parent="UI/Interface" index="0"]
+anchor_left = 0.461
+anchor_right = 0.531
+anchor_bottom = 0.078
+margin_left = -0.0640259
+margin_right = 0.255981
+margin_bottom = -4.956
+[connection signal="CurrentPlanetChanged" from="." to="Map" method="_on_Space_CurrentPlanetChanged"]
+[connection signal="InventoryChanged" from="Map" to="UI/Interface" method="_on_Map_InventoryChanged"]
+[connection signal="timeout" from="Map/Reload" to="Map" method="_on_Reload_timeout"]
+[connection signal="timeout" from="Map/Reload" to="." method="_on_Reload_timeout"]
+[connection signal="DeleteTile" from="Player/Gun" to="Map" method="_on_Gun_DeleteTile"]
+[connection signal="timeout" from="Ticks" to="." method="_on_Ticks_timeout"]
+[connection signal="HealthChanged" from="UI/Interface" to="Player" method="_on_Interface_HealthChanged"]
+[connection signal="pressed" from="UI/Interface/Pause" to="Player" method="_on_Pause_pressed"]
+
+[editable path="Player"]
+
+[editable path="UI/Interface"]

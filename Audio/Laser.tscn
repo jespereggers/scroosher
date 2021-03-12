@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Audio/laser4.ogg" type="AudioStream" id=1]
+
+[node name="Laser" type="AudioStreamPlayer2D"]
+stream = ExtResource( 1 )
+volume_db = -15.0
+pitch_scale = 0.6
+autoplay = true
+max_distance = 150.0
+attenuation = 0.297302

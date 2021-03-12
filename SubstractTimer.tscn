@@ -1,0 +1,5 @@
+[gd_scene format=2]
+
+[node name="SubstractTimer" type="Timer"]
+wait_time = 10.0
+autostart = true

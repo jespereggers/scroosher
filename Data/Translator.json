@@ -1,0 +1,70 @@
+{
+    "GetName" : {
+    
+        "Asteroids" : {
+            "0" : "Metroid0",
+            "1" : "Metroid1",
+            "2" : "Metroid2",
+            "3" : "Empty",
+            "4" : "Star0",
+            "5" : "Star1",
+            "6" : "Star2"
+        },
+        "Planets" : {
+            "-1" : "Empty",
+            "0" : "Armenia0",
+            "1" : "Armenia1",
+            "2" : "Armenia2",
+            "3" : "Orbis0",
+            "4" : "Orbis1",
+            "5" : "Orbis2",
+            "6" : "Palos0",
+            "7" : "Palos1",
+            "8" : "Palos2"
+        },
+        "Ground" : {
+            "0" : "Gras_Block",
+            "1" : "Ice_Block",
+            "2" : "Sand_Block"
+        },
+        "Sticker": {
+            "0" : "Gras_Block",
+            "2" : "Ice_Block",
+            "1" : "Sand_Block"
+        }
+    },
+
+    "GetID" : {
+        "Asteroids" : {
+            "Metroid0" : 0,
+            "Metroid1" : 1,
+            "Metroid2" : 2,
+            "Empty" : 3,
+            "Star0" : 4,
+            "Star1" : 5,
+            "Star2" : 6
+        },
+        "Planets" : {
+            "Empty" : -1,
+            "Armenia0" : 0,
+            "Armenia1" : 1,
+            "Armenia2" : 2,
+            "Orbis0" : 3,
+            "Orbis1" : 4,
+            "Orbis2" : 5,
+            "Palos0" : 6,
+            "Palos1" : 7,
+            "Palos2" : 8
+        },
+        "Ground" : {
+            "Gras_Block" : 0,
+            "Ice_Block" : 1,
+            "Sand_Block" : 2
+        },
+        "Sticker" : {
+            "Gras_Block" : 0,
+            "Ice_Block" : 2,
+            "Sand_Block" : 1
+        }
+    }
+}

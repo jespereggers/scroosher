@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Audio/Another World.wav" type="AudioStream" id=1]
+[ext_resource path="res://Music.gd" type="Script" id=2]
+[ext_resource path="res://Audio/laser4.ogg" type="AudioStream" id=3]
+[ext_resource path="res://Audio/rumble2.ogg" type="AudioStream" id=4]
+
+[node name="Music" type="Node"]
+script = ExtResource( 2 )
+
+[node name="Theme" type="AudioStreamPlayer" parent="."]
+pause_mode = 2
+stream = ExtResource( 1 )
+autoplay = true
+
+[node name="Laser" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 3 )
+volume_db = -8.0
+pitch_scale = 0.32
+
+[node name="Explosion" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 4 )
+volume_db = 3.216
+pitch_scale = 0.57
+[connection signal="finished" from="Theme" to="." method="_on_Theme_finished"]

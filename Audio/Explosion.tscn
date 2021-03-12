@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Audio/rumble2.ogg" type="AudioStream" id=1]
+
+[node name="Explosion" type="AudioStreamPlayer2D"]
+stream = ExtResource( 1 )
+volume_db = -5.0
+pitch_scale = 0.5
+autoplay = true
+max_distance = 150.0
+attenuation = 0.297302
