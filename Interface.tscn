@@ -28,8 +28,8 @@ font_data = ExtResource( 8 )
 [node name="Interface" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_top = -1.0
-margin_bottom = 1.0
+margin_top = 4.0
+margin_bottom = 6.0
 script = ExtResource( 9 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -140,9 +140,10 @@ __meta__ = {
 }
 
 [node name="Energy" type="TextureRect" parent="LeftCounter"]
-margin_right = 102.0
+margin_right = 110.0
 margin_bottom = 45.0
-rect_min_size = Vector2( 102, 45 )
+rect_min_size = Vector2( 110, 45 )
+size_flags_vertical = 3
 texture = ExtResource( 7 )
 expand = true
 __meta__ = {
@@ -163,10 +164,12 @@ __meta__ = {
 }
 
 [node name="Icon" type="TextureRect" parent="LeftCounter"]
-margin_left = 112.0
-margin_right = 254.0
-margin_bottom = 45.0
+margin_left = 120.0
+margin_top = 2.0
+margin_right = 262.0
+margin_bottom = 42.0
 rect_min_size = Vector2( 142, 42 )
+size_flags_vertical = 0
 texture = ExtResource( 10 )
 expand = true
 

@@ -237,6 +237,7 @@ margin_bottom = -537.0
 focus_mode = 0
 custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 0.831373, 0.584314, 0, 1 )
 custom_colors/font_color_pressed = Color( 1, 0.176471, 0.176471, 1 )
 toggle_mode = true
 enabled_focus_mode = 0
