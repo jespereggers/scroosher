@@ -1,6 +1,6 @@
-# Scroosher
+# Scroosher - Open Source procedual space shooter
  Infinite space exploration with a twist
- 
+_This game was made by Jesper Eggers in 2020_
  
  **Explorer an infinite world**
  
