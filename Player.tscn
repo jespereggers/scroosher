@@ -107,7 +107,7 @@ playing = true
 visible = false
 frames = SubResource( 3 )
 animation = "Down"
-frame = 4
+frame = 3
 playing = true
 
 [node name="Light" type="Light2D" parent="."]

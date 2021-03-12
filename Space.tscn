@@ -68,7 +68,7 @@ color = Color( 0, 0, 0, 1 )
 [node name="Player" parent="." instance=ExtResource( 3 )]
 
 [node name="Norman" parent="Player/Texture/Players" index="0"]
-frame = 5
+frame = 3
 
 [node name="Line" type="Line2D" parent="."]
 visible = false
@@ -88,9 +88,6 @@ margin_bottom = 0.0
 anchor_right = 0.531
 margin_right = 0.255981
 margin_bottom = -4.956
-
-[node name="Icon" parent="UI/Interface/LeftCounter" index="1"]
-margin_top = 0.0
 [connection signal="CurrentPlanetChanged" from="." to="Map" method="_on_Space_CurrentPlanetChanged"]
 [connection signal="InventoryChanged" from="Map" to="UI/Interface" method="_on_Map_InventoryChanged"]
 [connection signal="timeout" from="Map/Reload" to="Map" method="_on_Reload_timeout"]
