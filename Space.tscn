@@ -67,9 +67,6 @@ color = Color( 0, 0, 0, 1 )
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
 
-[node name="Norman" parent="Player/Texture/Players" index="0"]
-frame = 3
-
 [node name="Line" type="Line2D" parent="."]
 visible = false
 points = PoolVector2Array( 68.3623, 33.0362 )
@@ -84,7 +81,7 @@ autostart = true
 margin_top = 0.0
 margin_bottom = 0.0
 
-[node name="Pause" parent="UI/Interface" index="0"]
+[node name="Pause" parent="UI/Interface" index="2"]
 anchor_right = 0.531
 margin_right = 0.255981
 margin_bottom = -4.956

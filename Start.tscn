@@ -106,6 +106,7 @@ margin_bottom = -294.868
 rect_min_size = Vector2( 100, 100 )
 texture = ExtResource( 14 )
 expand = true
+stretch_mode = 6
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -120,6 +121,7 @@ margin_bottom = -78.868
 rect_min_size = Vector2( 100, 100 )
 texture = ExtResource( 15 )
 expand = true
+stretch_mode = 6
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -133,6 +135,7 @@ margin_right = -10.8774
 margin_bottom = -127.5
 texture = ExtResource( 2 )
 expand = true
+stretch_mode = 6
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -148,6 +151,7 @@ texture_normal = ExtResource( 4 )
 texture_pressed = ExtResource( 5 )
 texture_hover = ExtResource( 3 )
 expand = true
+stretch_mode = 5
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -162,6 +166,7 @@ margin_bottom = -307.0
 rect_min_size = Vector2( 135, 135 )
 texture = ExtResource( 16 )
 expand = true
+stretch_mode = 6
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -169,15 +174,16 @@ __meta__ = {
 [node name="YouTube" type="TextureButton" parent="UI"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 410.0
+margin_left = 409.37
 margin_top = 320.0
-margin_right = -479.0
+margin_right = -479.63
 margin_bottom = -145.0
 rect_min_size = Vector2( 135, 135 )
 texture_normal = ExtResource( 19 )
 texture_pressed = ExtResource( 17 )
 texture_hover = ExtResource( 18 )
 expand = true
+stretch_mode = 5
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -193,6 +199,7 @@ texture_normal = ExtResource( 6 )
 texture_pressed = ExtResource( 8 )
 texture_hover = ExtResource( 7 )
 expand = true
+stretch_mode = 5
 __meta__ = {
 "_edit_use_anchors_": false
 }

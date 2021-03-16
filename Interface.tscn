@@ -28,9 +28,9 @@ font_data = ExtResource( 8 )
 [node name="Interface" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 6.0
+margin_left = 5.47026
 margin_top = 4.0
-margin_right = -6.0
+margin_right = -6.52972
 margin_bottom = 6.0
 script = ExtResource( 9 )
 __meta__ = {
@@ -154,6 +154,7 @@ margin_bottom = 45.0
 rect_min_size = Vector2( 142, 42 )
 texture = ExtResource( 10 )
 expand = true
+stretch_mode = 6
 
 [node name="Pause" type="TextureButton" parent="."]
 anchor_left = 0.461
@@ -169,6 +170,7 @@ texture_normal = ExtResource( 3 )
 texture_pressed = ExtResource( 1 )
 texture_hover = ExtResource( 2 )
 expand = true
+stretch_mode = 5
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -200,16 +202,17 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -273.528
-margin_top = -58.0561
-margin_right = -193.528
-margin_bottom = -18.0561
+margin_left = -274.0
+margin_top = -58.0
+margin_right = -194.0
+margin_bottom = -18.0
 rect_min_size = Vector2( 80, 40 )
 rect_scale = Vector2( 3, 3 )
 texture_normal = ExtResource( 13 )
 texture_pressed = ExtResource( 16 )
 texture_hover = ExtResource( 14 )
 expand = true
+stretch_mode = 5
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -229,6 +232,7 @@ texture_normal = ExtResource( 15 )
 texture_pressed = ExtResource( 12 )
 texture_hover = ExtResource( 11 )
 expand = true
+stretch_mode = 5
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -246,7 +250,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 margin_top = -2.0
 margin_bottom = 1.0
-color = Color( 0, 0, 0, 0.392157 )
+color = Color( 1, 0, 0, 0.176471 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -266,6 +270,7 @@ texture_normal = ExtResource( 15 )
 texture_pressed = ExtResource( 12 )
 texture_hover = ExtResource( 11 )
 expand = true
+stretch_mode = 5
 __meta__ = {
 "_edit_use_anchors_": false
 }
