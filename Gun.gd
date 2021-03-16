@@ -23,6 +23,7 @@ func _process(_delta):
 		yield(get_tree().create_timer(0.2), "timeout")
 		CanFire = true
 
+
 func GetCollision(tile, node, pos):
 	if tile != "Empty" and Data.Map[node.get_name()][tile].has(pos):
 		if Data.Map[node.get_name()][tile][pos]["Health"] < 5:

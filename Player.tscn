@@ -85,6 +85,8 @@ script = ExtResource( 13 )
 [node name="View" type="Camera2D" parent="."]
 current = true
 zoom = Vector2( 0.3, 0.3 )
+smoothing_enabled = true
+smoothing_speed = 8.0
 
 [node name="Collision" type="CollisionShape2D" parent="."]
 position = Vector2( 0.210228, 0.105114 )
@@ -98,7 +100,6 @@ shape = SubResource( 1 )
 visible = false
 frames = SubResource( 2 )
 animation = "Top"
-frame = 1
 playing = true
 
 [node name="Players" type="Node2D" parent="Texture"]
@@ -107,7 +108,7 @@ playing = true
 visible = false
 frames = SubResource( 3 )
 animation = "Down"
-frame = 3
+frame = 6
 playing = true
 
 [node name="Light" type="Light2D" parent="."]

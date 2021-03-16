@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://Fonts/Font.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Player/Ships/Starter/Top/0.png" type="Texture" id=2]
@@ -20,17 +20,47 @@
 
 [sub_resource type="DynamicFont" id=1]
 size = 64
+outline_size = 4
+outline_color = Color( 1, 1, 1, 0.215686 )
 font_data = ExtResource( 1 )
 
-[sub_resource type="DynamicFont" id=2]
-extra_spacing_char = 5
-font_data = ExtResource( 1 )
+[sub_resource type="Animation" id=2]
+resource_name = "fly"
+length = 15.0
+loop = true
+step = 3.0
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:rect_position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 688.114, -0.25, 0, 0.25, 0, 688.114, -0.25, 0, 0.25, 0, 688.114, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 6, 15 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath(".:rect_position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 186.581, -0.25, 0, 0.25, 0, 54.4323, -0.25, 0, 0.25, 0, 186.581, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 6, 15 )
+}
 
 [sub_resource type="DynamicFont" id=3]
-size = 32
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+extra_spacing_char = 1
 font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=4]
+size = 32
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=5]
 size = 32
 outline_size = 2
 outline_color = Color( 0, 0, 0, 0.529412 )
@@ -129,16 +159,19 @@ __meta__ = {
 [node name="Logo" type="TextureRect" parent="UI"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 696.123
-margin_top = 127.5
-margin_right = -10.8774
-margin_bottom = -127.5
+margin_left = 688.114
+margin_top = 142.489
+margin_right = -18.8865
+margin_bottom = -112.511
 texture = ExtResource( 2 )
 expand = true
 stretch_mode = 6
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="UI/Logo"]
+anims/fly = SubResource( 2 )
 
 [node name="Start" type="TextureButton" parent="UI"]
 anchor_right = 1.0
@@ -161,9 +194,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 410.0
 margin_top = 158.0
-margin_right = -479.0
+margin_right = -494.0
 margin_bottom = -307.0
-rect_min_size = Vector2( 135, 135 )
+rect_min_size = Vector2( 120, 135 )
 texture = ExtResource( 16 )
 expand = true
 stretch_mode = 6
@@ -174,11 +207,11 @@ __meta__ = {
 [node name="YouTube" type="TextureButton" parent="UI"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 409.37
+margin_left = 409.0
 margin_top = 320.0
-margin_right = -479.63
+margin_right = -495.0
 margin_bottom = -145.0
-rect_min_size = Vector2( 135, 135 )
+rect_min_size = Vector2( 120, 135 )
 texture_normal = ExtResource( 19 )
 texture_pressed = ExtResource( 17 )
 texture_hover = ExtResource( 18 )
@@ -208,13 +241,15 @@ __meta__ = {
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
-margin_top = 573.0
+margin_top = 547.0
 margin_right = -8.0
-margin_bottom = -7.0
-custom_fonts/font = SubResource( 2 )
-text = "TakeLime (2020) - Collab Jam Submission"
+margin_bottom = -10.0
+custom_fonts/font = SubResource( 3 )
+text = "Developed by TakeLime Games
+Scroosher is Open-Source and free Software. No limitations or rules to follow."
 align = 1
 valign = 1
+autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -225,7 +260,7 @@ anchor_bottom = 1.0
 margin_left = 887.0
 margin_bottom = -543.0
 focus_mode = 0
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_hover = Color( 0.831373, 0.584314, 0, 1 )
 custom_colors/font_color_pressed = Color( 1, 0.270588, 0.270588, 1 )
@@ -242,7 +277,7 @@ anchor_bottom = 1.0
 margin_right = -856.808
 margin_bottom = -537.0
 focus_mode = 0
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 5 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_hover = Color( 0.831373, 0.584314, 0, 1 )
 custom_colors/font_color_pressed = Color( 1, 0.176471, 0.176471, 1 )

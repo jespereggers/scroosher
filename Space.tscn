@@ -67,6 +67,9 @@ color = Color( 0, 0, 0, 1 )
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
 
+[node name="Norman" parent="Player/Texture/Players" index="0"]
+frame = 0
+
 [node name="Line" type="Line2D" parent="."]
 visible = false
 points = PoolVector2Array( 68.3623, 33.0362 )

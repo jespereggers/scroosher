@@ -32,7 +32,7 @@ Audio="*res://Audio.tscn"
 window/per_pixel_transparency/allowed=true
 window/per_pixel_transparency/enabled=true
 mouse_cursor/custom_image="res://Textures/UI/Mouse.png"
-mouse_cursor/tooltip_position_offset=Vector2( 32, 32 )
+mouse_cursor/tooltip_position_offset=Vector2( 8, 8 )
 window/stretch/mode="viewport"
 
 [input]

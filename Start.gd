@@ -1,6 +1,7 @@
 extends Control
 
 func _ready():
+	$UI/Logo/AnimationPlayer.play("fly")
 	if File.new().file_exists("user://Save.sc"):
 		$UI/Planet.texture = load("res://Textures/Icons/"+GetScene().replace("res://","").replace(".tscn","") + "Mini.png")
 	else:

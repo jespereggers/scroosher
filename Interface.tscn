@@ -32,6 +32,7 @@ margin_left = 5.47026
 margin_top = 4.0
 margin_right = -6.52972
 margin_bottom = 6.0
+mouse_filter = 2
 script = ExtResource( 9 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -154,7 +155,6 @@ margin_bottom = 45.0
 rect_min_size = Vector2( 142, 42 )
 texture = ExtResource( 10 )
 expand = true
-stretch_mode = 6
 
 [node name="Pause" type="TextureButton" parent="."]
 anchor_left = 0.461
