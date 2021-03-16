@@ -100,6 +100,7 @@ shape = SubResource( 1 )
 visible = false
 frames = SubResource( 2 )
 animation = "Top"
+frame = 1
 playing = true
 
 [node name="Players" type="Node2D" parent="Texture"]
@@ -108,7 +109,7 @@ playing = true
 visible = false
 frames = SubResource( 3 )
 animation = "Down"
-frame = 6
+frame = 3
 playing = true
 
 [node name="Light" type="Light2D" parent="."]

@@ -3,8 +3,9 @@ extends Node2D
 var Bullet = preload("res://Bullet.tscn")
 var CanFire = true
 signal DeleteTile(tile, node, pos)
+var speed = 5
 
-func _process(_delta):
+func _process(delta):
 	self.look_at(get_global_mouse_position())
 	
 	if Input.is_action_pressed("left_click") and CanFire:
