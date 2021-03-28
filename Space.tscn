@@ -67,9 +67,6 @@ color = Color( 0, 0, 0, 1 )
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
 
-[node name="Norman" parent="Player/Texture/Players" index="0"]
-frame = 0
-
 [node name="Line" type="Line2D" parent="."]
 visible = false
 points = PoolVector2Array( 68.3623, 33.0362 )
@@ -90,8 +87,8 @@ margin_right = 0.255981
 margin_bottom = -4.956
 [connection signal="CurrentPlanetChanged" from="." to="Map" method="_on_Space_CurrentPlanetChanged"]
 [connection signal="InventoryChanged" from="Map" to="UI/Interface" method="_on_Map_InventoryChanged"]
-[connection signal="timeout" from="Map/Reload" to="." method="_on_Reload_timeout"]
 [connection signal="timeout" from="Map/Reload" to="Map" method="_on_Reload_timeout"]
+[connection signal="timeout" from="Map/Reload" to="." method="_on_Reload_timeout"]
 [connection signal="DeleteTile" from="Player/Gun" to="Map" method="_on_Gun_DeleteTile"]
 [connection signal="timeout" from="Ticks" to="." method="_on_Ticks_timeout"]
 [connection signal="HealthChanged" from="UI/Interface" to="Player" method="_on_Interface_HealthChanged"]
