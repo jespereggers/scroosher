@@ -113,11 +113,11 @@ __meta__ = {
 }
 
 [node name="Orbis" type="TextureRect" parent="UI"]
-anchor_right = 0.99
+anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 874.611
 margin_top = 137.132
-margin_right = -39.1487
+margin_right = -49.3887
 margin_bottom = -362.868
 rect_min_size = Vector2( 100, 100 )
 texture = ExtResource( 13 )
@@ -288,6 +288,7 @@ flat = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
 [connection signal="pressed" from="UI/Start" to="." method="_on_Start_pressed"]
 [connection signal="pressed" from="UI/YouTube" to="." method="_on_YouTube_pressed"]
 [connection signal="pressed" from="UI/New" to="." method="_on_New_pressed"]
