@@ -1,7 +1,7 @@
-extends KinematicBody2D
+extends CharacterBody2D
 
 var speed : = 90.0
-var path : = PoolVector2Array() setget set_path
+var path : = PackedVector2Array() : set = set_path
 signal BodyEntered(node)
 signal FinishedPath()
 var GunDregrees : Vector2 = Vector2(0,0)
@@ -23,7 +23,7 @@ func move_along_path(distance: float) -> void:
 			if self.position.distance_to(path[path.size()-1]) > 25:
 				var distance_to_next : = start_point.distance_to(path[0])
 				if distance <= distance_to_next and distance >= 0.0:
-					position = start_point.linear_interpolate(path[0], distance / distance_to_next)
+					position = start_point.lerp(path[0], distance / distance_to_next)
 					play_animation(start_point, path[0])
 					break
 				elif distance < 0.0:
@@ -35,7 +35,7 @@ func move_along_path(distance: float) -> void:
 				start_point = path[0]
 				path.remove(0)
 				
-func set_path(value: PoolVector2Array) -> void:
+func set_path(value: PackedVector2Array) -> void:
 	path = value
 	if value.size() == 0:
 		return
@@ -46,14 +46,14 @@ func play_animation(start_point, next_point):
 	var DistanceY = next_point.y - start_point.y
 	if abs(DistanceX) > abs(DistanceY):
 		if DistanceX > 0:
-			$Texture.play("Right")
+			$Texture2D.play("Right")
 		if DistanceX < 0:
-			$Texture.play("Left")
+			$Texture2D.play("Left")
 	else:
 		if DistanceY > 0:
-			$Texture.play("Down")
+			$Texture2D.play("Down")
 		if DistanceY < 0:
-			$Texture.play("Top")
+			$Texture2D.play("Top")
 	return
 
 

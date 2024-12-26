@@ -21,7 +21,7 @@ func _ready():
 	Sticker = OpenSimplexNoise.new()
 	Sticker.period = 10
 	Sticker.persistence = 1
-	Sticker.seed = int(rand_range(1,999))
+	Sticker.seed = int(randf_range(1,999))
 	
 	GenerateWorld()
 	
@@ -35,7 +35,7 @@ func GenerateWorld():
 					$Sticker.update_bitmask_area(Ground(x,y))
 
 func Ground(x,y):
-	Position = $Ground.world_to_map($Player.position)
+	Position = $Ground.local_to_map($Player.position)
 	Position.x = int(Position.x-(x - WITH / 2))
 	Position.y = int(Position.y-(y - HEIGHT / 2))
 	return Position
@@ -46,7 +46,7 @@ func _on_Ticks_timeout():
 
 func _on_LeavePlanet_LeavePlanet():
 	SaveLocalMap()
-	get_tree().change_scene("res://Space.tscn")
+	get_tree().change_scene_to_file("res://Space.tscn")
 	
 func SaveLocalMap():
 	for pos in $Ground.get_used_cells():

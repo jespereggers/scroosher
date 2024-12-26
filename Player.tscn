@@ -1,156 +1,250 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=31 format=3 uid="uid://ba5fi8fb2utae"]
 
-[ext_resource path="res://Player/Ships/Starter/Top/2.png" type="Texture" id=1]
-[ext_resource path="res://Player/Ships/Starter/Top/0.png" type="Texture" id=2]
-[ext_resource path="res://Player/Ships/Starter/Top/1.png" type="Texture" id=3]
-[ext_resource path="res://Player/Ships/Starter/Down/0.png" type="Texture" id=4]
-[ext_resource path="res://Player/Ships/Starter/Down/2.png" type="Texture" id=5]
-[ext_resource path="res://Player/Ships/Starter/Down/1.png" type="Texture" id=6]
-[ext_resource path="res://Player/Ships/Starter/Left/2.png" type="Texture" id=7]
-[ext_resource path="res://Player/Ships/Starter/Left/0.png" type="Texture" id=8]
-[ext_resource path="res://Player/Ships/Starter/Left/1.png" type="Texture" id=9]
-[ext_resource path="res://Player/Ships/Starter/Right/2.png" type="Texture" id=10]
-[ext_resource path="res://Player/Ships/Starter/Right/1.png" type="Texture" id=11]
-[ext_resource path="res://Player/Ships/Starter/Right/0.png" type="Texture" id=12]
-[ext_resource path="res://Player.gd" type="Script" id=13]
-[ext_resource path="res://Textures/UI/Healthbar/Progress.png" type="Texture" id=14]
-[ext_resource path="res://Textures/UI/Healthbar/Under.png" type="Texture" id=15]
-[ext_resource path="res://Textures/UI/Healthbar/Over.png" type="Texture" id=16]
-[ext_resource path="res://Player/Player/Norman/Top/0.png" type="Texture" id=17]
-[ext_resource path="res://Player/Player/Norman/Right/0.png" type="Texture" id=18]
-[ext_resource path="res://Player/Player/Norman/Right/1.png" type="Texture" id=19]
-[ext_resource path="res://Player/Player/Norman/Left/0.png" type="Texture" id=20]
-[ext_resource path="res://Player/Player/Norman/Left/1.png" type="Texture" id=21]
-[ext_resource path="res://Player/Player/Norman/Down/0.png" type="Texture" id=22]
-[ext_resource path="res://Player/Player/Norman/Down/1.png" type="Texture" id=23]
-[ext_resource path="res://Player/Ships/Starter/Gun/0.png" type="Texture" id=24]
-[ext_resource path="res://Gun.gd" type="Script" id=25]
-[ext_resource path="res://SubstractTimer.tscn" type="PackedScene" id=26]
-[ext_resource path="res://Textures/light.png" type="Texture" id=27]
+[ext_resource type="Texture2D" uid="uid://c5mb0j0t1ett" path="res://Player/Ships/Starter/Top/2.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://d13syq1cdrjgv" path="res://Player/Ships/Starter/Top/0.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://b8no0cc2qdb7b" path="res://Player/Ships/Starter/Top/1.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://cvx2861gb1yce" path="res://Player/Ships/Starter/Down/0.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://ddmsid53kp5o6" path="res://Player/Ships/Starter/Down/2.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://xc1ifx0mvrt5" path="res://Player/Ships/Starter/Down/1.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://c0xnydgvb5thn" path="res://Player/Ships/Starter/Left/2.png" id="7"]
+[ext_resource type="Texture2D" uid="uid://dy2cpwkdasba6" path="res://Player/Ships/Starter/Left/0.png" id="8"]
+[ext_resource type="Texture2D" uid="uid://ciojcjnauyoob" path="res://Player/Ships/Starter/Left/1.png" id="9"]
+[ext_resource type="Texture2D" uid="uid://7kwaplnduju0" path="res://Player/Ships/Starter/Right/2.png" id="10"]
+[ext_resource type="Texture2D" uid="uid://hyv7f0vvvg1x" path="res://Player/Ships/Starter/Right/1.png" id="11"]
+[ext_resource type="Texture2D" uid="uid://4oxflrtesems" path="res://Player/Ships/Starter/Right/0.png" id="12"]
+[ext_resource type="Script" path="res://Player.gd" id="13"]
+[ext_resource type="Texture2D" uid="uid://ctjajbhdgag36" path="res://Textures/UI/Healthbar/Progress.png" id="14"]
+[ext_resource type="Texture2D" uid="uid://7l1qliou7k4m" path="res://Textures/UI/Healthbar/Under.png" id="15"]
+[ext_resource type="Texture2D" uid="uid://c7njhxwh0ig2m" path="res://Textures/UI/Healthbar/Over.png" id="16"]
+[ext_resource type="Texture2D" uid="uid://bt7xsdak0ap5t" path="res://Player/Player/Norman/Top/0.png" id="17"]
+[ext_resource type="Texture2D" uid="uid://dki44bm66p228" path="res://Player/Player/Norman/Right/0.png" id="18"]
+[ext_resource type="Texture2D" uid="uid://cieje6of55qsk" path="res://Player/Player/Norman/Right/1.png" id="19"]
+[ext_resource type="Texture2D" uid="uid://0mbc88i65osj" path="res://Player/Player/Norman/Left/0.png" id="20"]
+[ext_resource type="Texture2D" uid="uid://drds06765rpgx" path="res://Player/Player/Norman/Left/1.png" id="21"]
+[ext_resource type="Texture2D" uid="uid://c7gpns88pu6pg" path="res://Player/Player/Norman/Down/0.png" id="22"]
+[ext_resource type="Texture2D" uid="uid://ddmlv2xkbjd4h" path="res://Player/Player/Norman/Down/1.png" id="23"]
+[ext_resource type="Texture2D" uid="uid://djlg7b2su5v1y" path="res://Player/Ships/Starter/Gun/0.png" id="24"]
+[ext_resource type="Script" path="res://Gun.gd" id="25"]
+[ext_resource type="PackedScene" path="res://SubstractTimer.tscn" id="26"]
+[ext_resource type="Texture2D" uid="uid://c0kl8xg18cjnb" path="res://Textures/light.png" id="27"]
 
-[sub_resource type="CircleShape2D" id=1]
+[sub_resource type="CircleShape2D" id="1"]
 radius = 6.9257
 
-[sub_resource type="SpriteFrames" id=2]
-animations = [ {
-"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 1 ) ],
+[sub_resource type="SpriteFrames" id="2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5")
+}],
 "loop": true,
-"name": "Top",
+"name": &"Down",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 4 ), ExtResource( 6 ), ExtResource( 5 ) ],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7")
+}],
 "loop": true,
-"name": "Down",
+"name": &"Left",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 7 ) ],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10")
+}],
 "loop": true,
-"name": "Left",
+"name": &"Right",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 12 ), ExtResource( 11 ), ExtResource( 10 ) ],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1")
+}],
 "loop": true,
-"name": "Right",
+"name": &"Top",
 "speed": 5.0
-} ]
+}]
 
-[sub_resource type="SpriteFrames" id=3]
-animations = [ {
-"frames": [ ExtResource( 17 ) ],
+[sub_resource type="SpriteFrames" id="3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("22")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22")
+}],
 "loop": true,
-"name": "Top",
+"name": &"Down",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 22 ), ExtResource( 23 ), ExtResource( 22 ), ExtResource( 22 ), ExtResource( 22 ), ExtResource( 22 ), ExtResource( 22 ) ],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("20")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20")
+}],
 "loop": true,
-"name": "Down",
+"name": &"Left",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 20 ), ExtResource( 21 ), ExtResource( 20 ), ExtResource( 20 ), ExtResource( 20 ), ExtResource( 20 ), ExtResource( 20 ) ],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("18")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18")
+}],
 "loop": true,
-"name": "Left",
+"name": &"Right",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 18 ), ExtResource( 19 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17")
+}],
 "loop": true,
-"name": "Right",
+"name": &"Top",
 "speed": 5.0
-} ]
+}]
 
-[node name="Player" type="KinematicBody2D" groups=[
-"Player",
-]]
-script = ExtResource( 13 )
+[node name="Player" type="CharacterBody2D" groups=["Player"]]
+script = ExtResource("13")
 
 [node name="View" type="Camera2D" parent="."]
-current = true
-zoom = Vector2( 0.3, 0.3 )
-smoothing_enabled = true
-smoothing_speed = 8.0
+zoom = Vector2(0.3, 0.3)
+position_smoothing_speed = 8.0
 
 [node name="Collision" type="CollisionShape2D" parent="."]
-position = Vector2( 0.210228, 0.105114 )
-shape = SubResource( 1 )
+position = Vector2(0.210228, 0.105114)
+shape = SubResource("1")
 
-[node name="Texture" type="Node2D" parent="."]
+[node name="Texture2D" type="Node2D" parent="."]
 
-[node name="Ships" type="Node2D" parent="Texture"]
+[node name="Ships" type="Node2D" parent="Texture2D"]
 
-[node name="Starter" type="AnimatedSprite" parent="Texture/Ships"]
-visible = false
-frames = SubResource( 2 )
-animation = "Top"
+[node name="Starter" type="AnimatedSprite2D" parent="Texture2D/Ships"]
+sprite_frames = SubResource("2")
+animation = &"Top"
 frame = 2
-playing = true
 
-[node name="Players" type="Node2D" parent="Texture"]
+[node name="Players" type="Node2D" parent="Texture2D"]
 
-[node name="Norman" type="AnimatedSprite" parent="Texture/Players"]
+[node name="Norman" type="AnimatedSprite2D" parent="Texture2D/Players"]
 visible = false
-frames = SubResource( 3 )
-animation = "Down"
-playing = true
+sprite_frames = SubResource("3")
+animation = &"Down"
 
-[node name="Light" type="Light2D" parent="."]
+[node name="Light3D" type="PointLight2D" parent="."]
 show_behind_parent = true
-texture = ExtResource( 27 )
+color = Color(1, 1, 1, 0.662745)
+texture = ExtResource("27")
 texture_scale = 0.5
-color = Color( 1, 1, 1, 0.662745 )
 
 [node name="Gun" type="Node2D" parent="."]
 visible = false
 show_behind_parent = true
-script = ExtResource( 25 )
+script = ExtResource("25")
 
-[node name="Texture" type="Sprite" parent="Gun"]
+[node name="Texture2D" type="Sprite2D" parent="Gun"]
 rotation = 1.5708
-texture = ExtResource( 24 )
+texture = ExtResource("24")
 
 [node name="BulletPoint" type="Node2D" parent="Gun"]
-position = Vector2( 8, 0 )
+position = Vector2(8, 0)
 
-[node name="Healthbar" type="TextureProgress" parent="."]
+[node name="Healthbar" type="TextureProgressBar" parent="."]
+custom_minimum_size = Vector2(14, 5)
+anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -7.0625
-margin_top = -14.0
-margin_right = 6.9375
-margin_bottom = -9.0
-rect_min_size = Vector2( 14, 5 )
+offset_left = -7.0625
+offset_top = -14.0
+offset_right = 6.9375
+offset_bottom = -9.0
 value = 100.0
-texture_under = ExtResource( 15 )
-texture_over = ExtResource( 16 )
-texture_progress = ExtResource( 14 )
 nine_patch_stretch = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
+texture_under = ExtResource("15")
+texture_over = ExtResource("16")
+texture_progress = ExtResource("14")
 
-[node name="SubstractTimer" parent="." instance=ExtResource( 26 )]
+[node name="SubstractTimer" parent="." instance=ExtResource("26")]
 
 [node name="Timer" type="Timer" parent="."]
 autostart = true
+
 [connection signal="timeout" from="SubstractTimer" to="." method="_on_SubstractTimer_timeout"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

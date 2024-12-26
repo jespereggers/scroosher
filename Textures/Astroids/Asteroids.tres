@@ -1,52 +1,52 @@
 [gd_resource type="TileSet" load_steps=21 format=2]
 
-[ext_resource path="res://Textures/Astroids/Metroid/Metroid0.png" type="Texture" id=1]
-[ext_resource path="res://Textures/Astroids/Star/Star2.png" type="Texture" id=2]
-[ext_resource path="res://Textures/Astroids/Star/Star1.png" type="Texture" id=3]
-[ext_resource path="res://Textures/Astroids/Metroid/Metroid2.png" type="Texture" id=4]
-[ext_resource path="res://Textures/Astroids/Metroid/Metroid1.png" type="Texture" id=5]
-[ext_resource path="res://Textures/Astroids/Star/Star0.png" type="Texture" id=6]
-[ext_resource path="res://Textures/Empty/Empty.png" type="Texture" id=7]
+[ext_resource path="res://Textures/Astroids/Metroid/Metroid0.png" type="Texture2D" id=1]
+[ext_resource path="res://Textures/Astroids/Star/Star2.png" type="Texture2D" id=2]
+[ext_resource path="res://Textures/Astroids/Star/Star1.png" type="Texture2D" id=3]
+[ext_resource path="res://Textures/Astroids/Metroid/Metroid2.png" type="Texture2D" id=4]
+[ext_resource path="res://Textures/Astroids/Metroid/Metroid1.png" type="Texture2D" id=5]
+[ext_resource path="res://Textures/Astroids/Star/Star0.png" type="Texture2D" id=6]
+[ext_resource path="res://Textures/Empty/Empty.png" type="Texture2D" id=7]
 
 [sub_resource type="OccluderPolygon2D" id=1]
-polygon = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+polygon = PackedVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 
 [sub_resource type="ConvexPolygonShape2D" id=2]
-points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+points = PackedVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 
 [sub_resource type="OccluderPolygon2D" id=3]
-polygon = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+polygon = PackedVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 
 [sub_resource type="ConvexPolygonShape2D" id=4]
-points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+points = PackedVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 
 [sub_resource type="OccluderPolygon2D" id=5]
-polygon = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+polygon = PackedVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 
 [sub_resource type="ConvexPolygonShape2D" id=6]
-points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+points = PackedVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 
 [sub_resource type="NavigationPolygon" id=7]
-vertices = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
-polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+vertices = PackedVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+polygons = [ PackedInt32Array( 0, 1, 2, 3 ) ]
 
 [sub_resource type="OccluderPolygon2D" id=8]
-polygon = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+polygon = PackedVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 
 [sub_resource type="ConvexPolygonShape2D" id=9]
-points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+points = PackedVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 
 [sub_resource type="OccluderPolygon2D" id=10]
-polygon = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+polygon = PackedVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 
 [sub_resource type="ConvexPolygonShape2D" id=11]
-points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+points = PackedVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 
 [sub_resource type="OccluderPolygon2D" id=12]
-polygon = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+polygon = PackedVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 
 [sub_resource type="ConvexPolygonShape2D" id=13]
-points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+points = PackedVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 
 [resource]
 0/name = "Metroid0.png 0"

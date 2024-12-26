@@ -10,18 +10,18 @@ func _process(delta):
 	
 	if Input.is_action_pressed("left_click") and CanFire:
 		Audio.PlayLaser(get_parent().position)
-		var BulletInstance = Bullet.instance()
+		var BulletInstance = Bullet.instantiate()
 		BulletInstance.position = $BulletPoint.get_global_position()
 		BulletInstance.rotation_degrees = rotation_degrees
-		BulletInstance.apply_impulse(Vector2(),Vector2(500, 0).rotated(rotation))
+		BulletInstance.apply_impulse(Vector2(500, 0).rotated(rotation), Vector2())
 		BulletInstance.name += "ByPlayer"
 		get_tree().get_root().add_child(BulletInstance)
 		BulletInstance.add_to_group("Bullet", true)
 		
-		BulletInstance.connect("Collision", self, "GetCollision")
+		BulletInstance.connect("Collision",Callable(self,"GetCollision"))
 		
 		CanFire = false
-		yield(get_tree().create_timer(0.2), "timeout")
+		await get_tree().create_timer(0.2).timeout
 		CanFire = true
 
 
@@ -32,4 +32,3 @@ func GetCollision(tile, node, pos):
 			emit_signal("DeleteTile", tile, node, pos)
 		else:
 			Data.Map[node.get_name()][tile][pos]["Health"] -= 5
-

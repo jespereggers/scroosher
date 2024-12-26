@@ -40,7 +40,7 @@ func _on_Title_pressed():
 	Data.Save(get_tree().current_scene.get_name().replace("res://","").replace(".tscn",""))
 
 	get_tree().paused = false
-	get_tree().change_scene("res://Start.tscn")
+	get_tree().change_scene_to_file("res://Start.tscn")
 
 
 func _on_Back_pressed():
@@ -56,7 +56,7 @@ func _on_Pause_pressed():
 func _on_GameOver_pressed():
 	Directory.new().remove("user://Save.sc")
 	get_tree().paused = false
-	get_tree().change_scene("res://Start.tscn")
+	get_tree().change_scene_to_file("res://Start.tscn")
 
 
 func _on_Timer_timeout():

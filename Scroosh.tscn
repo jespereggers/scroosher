@@ -1,83 +1,83 @@
 [gd_scene load_steps=66 format=2]
 
 [ext_resource path="res://Player.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Textures/Astroids/Metroid/Metroid0.png" type="Texture" id=2]
-[ext_resource path="res://Textures/Astroids/Metroid/Metroid1.png" type="Texture" id=3]
-[ext_resource path="res://Textures/Astroids/Metroid/Metroid2.png" type="Texture" id=4]
+[ext_resource path="res://Textures/Astroids/Metroid/Metroid0.png" type="Texture2D" id=2]
+[ext_resource path="res://Textures/Astroids/Metroid/Metroid1.png" type="Texture2D" id=3]
+[ext_resource path="res://Textures/Astroids/Metroid/Metroid2.png" type="Texture2D" id=4]
 [ext_resource path="res://Map.gd" type="Script" id=5]
-[ext_resource path="res://Textures/Empty/Empty.png" type="Texture" id=6]
-[ext_resource path="res://Textures/Planets/Armenia/Armenia1.png" type="Texture" id=7]
-[ext_resource path="res://Textures/Planets/Armenia/Armenia0.png" type="Texture" id=8]
-[ext_resource path="res://Textures/Planets/Armenia/Armenia2.png" type="Texture" id=9]
-[ext_resource path="res://Textures/Planets/Orbis/Orbis0.png" type="Texture" id=10]
-[ext_resource path="res://Textures/Planets/Orbis/Orbis2.png" type="Texture" id=11]
-[ext_resource path="res://Textures/Planets/Orbis/Orbis1.png" type="Texture" id=12]
-[ext_resource path="res://Textures/Planets/Palos/Palos0.png" type="Texture" id=13]
-[ext_resource path="res://Textures/Planets/Palos/Palos1.png" type="Texture" id=14]
-[ext_resource path="res://Textures/Planets/Palos/Palos2.png" type="Texture" id=15]
-[ext_resource path="res://Textures/Astroids/Star/Star0.png" type="Texture" id=16]
-[ext_resource path="res://Textures/Astroids/Star/Star2.png" type="Texture" id=17]
-[ext_resource path="res://Textures/Astroids/Star/Star1.png" type="Texture" id=18]
+[ext_resource path="res://Textures/Empty/Empty.png" type="Texture2D" id=6]
+[ext_resource path="res://Textures/Planets/Armenia/Armenia1.png" type="Texture2D" id=7]
+[ext_resource path="res://Textures/Planets/Armenia/Armenia0.png" type="Texture2D" id=8]
+[ext_resource path="res://Textures/Planets/Armenia/Armenia2.png" type="Texture2D" id=9]
+[ext_resource path="res://Textures/Planets/Orbis/Orbis0.png" type="Texture2D" id=10]
+[ext_resource path="res://Textures/Planets/Orbis/Orbis2.png" type="Texture2D" id=11]
+[ext_resource path="res://Textures/Planets/Orbis/Orbis1.png" type="Texture2D" id=12]
+[ext_resource path="res://Textures/Planets/Palos/Palos0.png" type="Texture2D" id=13]
+[ext_resource path="res://Textures/Planets/Palos/Palos1.png" type="Texture2D" id=14]
+[ext_resource path="res://Textures/Planets/Palos/Palos2.png" type="Texture2D" id=15]
+[ext_resource path="res://Textures/Astroids/Star/Star0.png" type="Texture2D" id=16]
+[ext_resource path="res://Textures/Astroids/Star/Star2.png" type="Texture2D" id=17]
+[ext_resource path="res://Textures/Astroids/Star/Star1.png" type="Texture2D" id=18]
 
 [sub_resource type="NavigationPolygon" id=1]
-vertices = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
-polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+vertices = PackedVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+polygons = [ PackedInt32Array( 0, 1, 2, 3 ) ]
 
 [sub_resource type="OccluderPolygon2D" id=2]
-polygon = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+polygon = PackedVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 
 [sub_resource type="ConvexPolygonShape2D" id=3]
-points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+points = PackedVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 
 [sub_resource type="NavigationPolygon" id=4]
-vertices = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
-polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+vertices = PackedVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+polygons = [ PackedInt32Array( 0, 1, 2, 3 ) ]
 
 [sub_resource type="OccluderPolygon2D" id=5]
-polygon = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+polygon = PackedVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 
 [sub_resource type="ConvexPolygonShape2D" id=6]
-points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+points = PackedVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 
 [sub_resource type="NavigationPolygon" id=7]
-vertices = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
-polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+vertices = PackedVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+polygons = [ PackedInt32Array( 0, 1, 2, 3 ) ]
 
 [sub_resource type="OccluderPolygon2D" id=8]
-polygon = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+polygon = PackedVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 
 [sub_resource type="ConvexPolygonShape2D" id=9]
-points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+points = PackedVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 
 [sub_resource type="NavigationPolygon" id=10]
-vertices = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
-polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+vertices = PackedVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+polygons = [ PackedInt32Array( 0, 1, 2, 3 ) ]
 
 [sub_resource type="OccluderPolygon2D" id=11]
-polygon = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+polygon = PackedVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 
 [sub_resource type="ConvexPolygonShape2D" id=12]
-points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+points = PackedVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 
 [sub_resource type="NavigationPolygon" id=13]
-vertices = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
-polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+vertices = PackedVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+polygons = [ PackedInt32Array( 0, 1, 2, 3 ) ]
 
 [sub_resource type="OccluderPolygon2D" id=14]
-polygon = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+polygon = PackedVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 
 [sub_resource type="ConvexPolygonShape2D" id=15]
-points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+points = PackedVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 
 [sub_resource type="NavigationPolygon" id=16]
-vertices = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
-polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+vertices = PackedVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+polygons = [ PackedInt32Array( 0, 1, 2, 3 ) ]
 
 [sub_resource type="OccluderPolygon2D" id=17]
-polygon = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+polygon = PackedVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 
 [sub_resource type="ConvexPolygonShape2D" id=18]
-points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+points = PackedVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 
 [sub_resource type="TileSet" id=19]
 0/name = "Metroid0.png 0"
@@ -234,94 +234,94 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 6/z_index = 0
 
 [sub_resource type="NavigationPolygon" id=20]
-vertices = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+vertices = PackedVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+polygons = [ PackedInt32Array( 0, 1, 2, 3 ) ]
 
 [sub_resource type="OccluderPolygon2D" id=21]
-polygon = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+polygon = PackedVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
 [sub_resource type="ConvexPolygonShape2D" id=22]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+points = PackedVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
 [sub_resource type="NavigationPolygon" id=23]
-vertices = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+vertices = PackedVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+polygons = [ PackedInt32Array( 0, 1, 2, 3 ) ]
 
 [sub_resource type="OccluderPolygon2D" id=24]
-polygon = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+polygon = PackedVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
 [sub_resource type="ConvexPolygonShape2D" id=25]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+points = PackedVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
 [sub_resource type="NavigationPolygon" id=26]
-vertices = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+vertices = PackedVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+polygons = [ PackedInt32Array( 0, 1, 2, 3 ) ]
 
 [sub_resource type="OccluderPolygon2D" id=27]
-polygon = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+polygon = PackedVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
 [sub_resource type="ConvexPolygonShape2D" id=28]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+points = PackedVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
 [sub_resource type="NavigationPolygon" id=29]
-vertices = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+vertices = PackedVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+polygons = [ PackedInt32Array( 0, 1, 2, 3 ) ]
 
 [sub_resource type="OccluderPolygon2D" id=30]
-polygon = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+polygon = PackedVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
 [sub_resource type="ConvexPolygonShape2D" id=31]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+points = PackedVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
 [sub_resource type="NavigationPolygon" id=32]
-vertices = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+vertices = PackedVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+polygons = [ PackedInt32Array( 0, 1, 2, 3 ) ]
 
 [sub_resource type="OccluderPolygon2D" id=33]
-polygon = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+polygon = PackedVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
 [sub_resource type="ConvexPolygonShape2D" id=34]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+points = PackedVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
 [sub_resource type="NavigationPolygon" id=35]
-vertices = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+vertices = PackedVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+polygons = [ PackedInt32Array( 0, 1, 2, 3 ) ]
 
 [sub_resource type="OccluderPolygon2D" id=36]
-polygon = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+polygon = PackedVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
 [sub_resource type="ConvexPolygonShape2D" id=37]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+points = PackedVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
 [sub_resource type="NavigationPolygon" id=38]
-vertices = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+vertices = PackedVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+polygons = [ PackedInt32Array( 0, 1, 2, 3 ) ]
 
 [sub_resource type="OccluderPolygon2D" id=39]
-polygon = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+polygon = PackedVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
 [sub_resource type="ConvexPolygonShape2D" id=40]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+points = PackedVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
 [sub_resource type="NavigationPolygon" id=41]
-vertices = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+vertices = PackedVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+polygons = [ PackedInt32Array( 0, 1, 2, 3 ) ]
 
 [sub_resource type="OccluderPolygon2D" id=42]
-polygon = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+polygon = PackedVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
 [sub_resource type="ConvexPolygonShape2D" id=43]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+points = PackedVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
 [sub_resource type="NavigationPolygon" id=44]
-vertices = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+vertices = PackedVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+polygons = [ PackedInt32Array( 0, 1, 2, 3 ) ]
 
 [sub_resource type="OccluderPolygon2D" id=45]
-polygon = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+polygon = PackedVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
 [sub_resource type="ConvexPolygonShape2D" id=46]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+points = PackedVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
 [sub_resource type="TileSet" id=47]
 0/name = "Armenia0.png 0"

@@ -1,24 +1,24 @@
 [gd_scene load_steps=23 format=2]
 
-[ext_resource path="res://Fonts/Font.ttf" type="DynamicFontData" id=1]
-[ext_resource path="res://Player/Ships/Starter/Top/0.png" type="Texture" id=2]
-[ext_resource path="res://Textures/UI/Start/1.png" type="Texture" id=3]
-[ext_resource path="res://Textures/UI/Start/0.png" type="Texture" id=4]
-[ext_resource path="res://Textures/UI/Start/2.png" type="Texture" id=5]
-[ext_resource path="res://Textures/UI/New/0.png" type="Texture" id=6]
-[ext_resource path="res://Textures/UI/New/1.png" type="Texture" id=7]
-[ext_resource path="res://Textures/UI/New/2.png" type="Texture" id=8]
+[ext_resource path="res://Fonts/Font.ttf" type="FontFile" id=1]
+[ext_resource path="res://Player/Ships/Starter/Top/0.png" type="Texture2D" id=2]
+[ext_resource path="res://Textures/UI/Start/1.png" type="Texture2D" id=3]
+[ext_resource path="res://Textures/UI/Start/0.png" type="Texture2D" id=4]
+[ext_resource path="res://Textures/UI/Start/2.png" type="Texture2D" id=5]
+[ext_resource path="res://Textures/UI/New/0.png" type="Texture2D" id=6]
+[ext_resource path="res://Textures/UI/New/1.png" type="Texture2D" id=7]
+[ext_resource path="res://Textures/UI/New/2.png" type="Texture2D" id=8]
 [ext_resource path="res://Start.gd" type="Script" id=9]
-[ext_resource path="res://Textures/Icons/OrbisMini.png" type="Texture" id=13]
-[ext_resource path="res://Textures/Icons/PalosMini.png" type="Texture" id=14]
-[ext_resource path="res://Textures/Icons/ArmeniaMini.png" type="Texture" id=15]
-[ext_resource path="res://Textures/Icons/Empty.png" type="Texture" id=16]
-[ext_resource path="res://Textures/Icons/YouTube/2.png" type="Texture" id=17]
-[ext_resource path="res://Textures/Icons/YouTube/1.png" type="Texture" id=18]
-[ext_resource path="res://Textures/Icons/YouTube/0.png" type="Texture" id=19]
-[ext_resource path="res://Textures/Backgrounds/ParralaxBackground.jpg" type="Texture" id=20]
+[ext_resource path="res://Textures/Icons/OrbisMini.png" type="Texture2D" id=13]
+[ext_resource path="res://Textures/Icons/PalosMini.png" type="Texture2D" id=14]
+[ext_resource path="res://Textures/Icons/ArmeniaMini.png" type="Texture2D" id=15]
+[ext_resource path="res://Textures/Icons/Empty.png" type="Texture2D" id=16]
+[ext_resource path="res://Textures/Icons/YouTube/2.png" type="Texture2D" id=17]
+[ext_resource path="res://Textures/Icons/YouTube/1.png" type="Texture2D" id=18]
+[ext_resource path="res://Textures/Icons/YouTube/0.png" type="Texture2D" id=19]
+[ext_resource path="res://Textures/Backgrounds/ParralaxBackground.jpg" type="Texture2D" id=20]
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="FontFile" id=1]
 size = 64
 outline_size = 4
 outline_color = Color( 1, 1, 1, 0.215686 )
@@ -30,37 +30,37 @@ length = 15.0
 loop = true
 step = 3.0
 tracks/0/type = "bezier"
-tracks/0/path = NodePath(".:rect_position:x")
+tracks/0/path = NodePath(".:position:x")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"points": PoolRealArray( 688.114, -0.25, 0, 0.25, 0, 688.114, -0.25, 0, 0.25, 0, 688.114, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 6, 15 )
+"points": PackedFloat32Array( 688.114, -0.25, 0, 0.25, 0, 688.114, -0.25, 0, 0.25, 0, 688.114, -0.25, 0, 0.25, 0 ),
+"times": PackedFloat32Array( 0, 6, 15 )
 }
 tracks/1/type = "bezier"
-tracks/1/path = NodePath(".:rect_position:y")
+tracks/1/path = NodePath(".:position:y")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"points": PoolRealArray( 186.581, -0.25, 0, 0.25, 0, 54.4323, -0.25, 0, 0.25, 0, 186.581, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 6, 15 )
+"points": PackedFloat32Array( 186.581, -0.25, 0, 0.25, 0, 54.4323, -0.25, 0, 0.25, 0, 186.581, -0.25, 0, 0.25, 0 ),
+"times": PackedFloat32Array( 0, 6, 15 )
 }
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="FontFile" id=3]
 outline_size = 2
 outline_color = Color( 0, 0, 0, 1 )
 extra_spacing_char = 1
 font_data = ExtResource( 1 )
 
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="FontFile" id=4]
 size = 32
 font_data = ExtResource( 1 )
 
-[sub_resource type="DynamicFont" id=5]
+[sub_resource type="FontFile" id=5]
 size = 32
 outline_size = 2
 outline_color = Color( 0, 0, 0, 0.529412 )
@@ -101,9 +101,9 @@ __meta__ = {
 [node name="Title" type="Label" parent="UI"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_right = -1.0
-margin_bottom = -480.0
-rect_min_size = Vector2( 0, 120 )
+offset_right = -1.0
+offset_bottom = -480.0
+custom_minimum_size = Vector2( 0, 120 )
 custom_fonts/font = SubResource( 1 )
 text = "Scroosher"
 align = 1
@@ -115,11 +115,11 @@ __meta__ = {
 [node name="Orbis" type="TextureRect" parent="UI"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 874.611
-margin_top = 137.132
-margin_right = -49.3887
-margin_bottom = -362.868
-rect_min_size = Vector2( 100, 100 )
+offset_left = 874.611
+offset_top = 137.132
+offset_right = -49.3887
+offset_bottom = -362.868
+custom_minimum_size = Vector2( 100, 100 )
 texture = ExtResource( 13 )
 expand = true
 __meta__ = {
@@ -129,11 +129,11 @@ __meta__ = {
 [node name="Palos" type="TextureRect" parent="UI"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 644.611
-margin_top = 205.132
-margin_right = -279.389
-margin_bottom = -294.868
-rect_min_size = Vector2( 100, 100 )
+offset_left = 644.611
+offset_top = 205.132
+offset_right = -279.389
+offset_bottom = -294.868
+custom_minimum_size = Vector2( 100, 100 )
 texture = ExtResource( 14 )
 expand = true
 stretch_mode = 6
@@ -144,11 +144,11 @@ __meta__ = {
 [node name="Armenia" type="TextureRect" parent="UI"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 827.611
-margin_top = 421.132
-margin_right = -96.3887
-margin_bottom = -78.868
-rect_min_size = Vector2( 100, 100 )
+offset_left = 827.611
+offset_top = 421.132
+offset_right = -96.3887
+offset_bottom = -78.868
+custom_minimum_size = Vector2( 100, 100 )
 texture = ExtResource( 15 )
 expand = true
 stretch_mode = 6
@@ -159,10 +159,10 @@ __meta__ = {
 [node name="Logo" type="TextureRect" parent="UI"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 688.114
-margin_top = 142.489
-margin_right = -18.8865
-margin_bottom = -112.511
+offset_left = 688.114
+offset_top = 142.489
+offset_right = -18.8865
+offset_bottom = -112.511
 texture = ExtResource( 2 )
 expand = true
 stretch_mode = 6
@@ -176,10 +176,10 @@ anims/fly = SubResource( 2 )
 [node name="Start" type="TextureButton" parent="UI"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 20.0
-margin_top = 158.0
-margin_right = -638.0
-margin_bottom = -307.0
+offset_left = 20.0
+offset_top = 158.0
+offset_right = -638.0
+offset_bottom = -307.0
 texture_normal = ExtResource( 4 )
 texture_pressed = ExtResource( 5 )
 texture_hover = ExtResource( 3 )
@@ -192,11 +192,11 @@ __meta__ = {
 [node name="Planet" type="TextureRect" parent="UI"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 410.0
-margin_top = 158.0
-margin_right = -494.0
-margin_bottom = -307.0
-rect_min_size = Vector2( 120, 135 )
+offset_left = 410.0
+offset_top = 158.0
+offset_right = -494.0
+offset_bottom = -307.0
+custom_minimum_size = Vector2( 120, 135 )
 texture = ExtResource( 16 )
 expand = true
 stretch_mode = 6
@@ -207,11 +207,11 @@ __meta__ = {
 [node name="YouTube" type="TextureButton" parent="UI"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 409.0
-margin_top = 320.0
-margin_right = -495.0
-margin_bottom = -145.0
-rect_min_size = Vector2( 120, 135 )
+offset_left = 409.0
+offset_top = 320.0
+offset_right = -495.0
+offset_bottom = -145.0
+custom_minimum_size = Vector2( 120, 135 )
 texture_normal = ExtResource( 19 )
 texture_pressed = ExtResource( 17 )
 texture_hover = ExtResource( 18 )
@@ -224,10 +224,10 @@ __meta__ = {
 [node name="New" type="TextureButton" parent="UI"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 24.0
-margin_top = 321.0
-margin_right = -636.0
-margin_bottom = -143.0
+offset_left = 24.0
+offset_top = 321.0
+offset_right = -636.0
+offset_bottom = -143.0
 texture_normal = ExtResource( 6 )
 texture_pressed = ExtResource( 8 )
 texture_hover = ExtResource( 7 )
@@ -240,10 +240,10 @@ __meta__ = {
 [node name="Credits" type="Label" parent="UI"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 4.0
-margin_top = 547.0
-margin_right = -8.0
-margin_bottom = -10.0
+offset_left = 4.0
+offset_top = 547.0
+offset_right = -8.0
+offset_bottom = -10.0
 custom_fonts/font = SubResource( 3 )
 text = "Developed by TakeLime Games
 Scroosher is Open-Source and free Software. No limitations or rules to follow."
@@ -257,14 +257,14 @@ __meta__ = {
 [node name="Close" type="Button" parent="UI"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 887.0
-margin_bottom = -543.0
+offset_left = 887.0
+offset_bottom = -543.0
 focus_mode = 0
 custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_hover = Color( 0.831373, 0.584314, 0, 1 )
 custom_colors/font_color_pressed = Color( 1, 0.270588, 0.270588, 1 )
-enabled_focus_mode = 0
+focus_mode = 0
 text = "Close"
 flat = true
 __meta__ = {
@@ -274,15 +274,15 @@ __meta__ = {
 [node name="DisableAudio" type="Button" parent="UI"]
 anchor_right = 0.992
 anchor_bottom = 1.0
-margin_right = -856.808
-margin_bottom = -537.0
+offset_right = -856.808
+offset_bottom = -537.0
 focus_mode = 0
 custom_fonts/font = SubResource( 5 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_hover = Color( 0.831373, 0.584314, 0, 1 )
 custom_colors/font_color_pressed = Color( 1, 0.176471, 0.176471, 1 )
 toggle_mode = true
-enabled_focus_mode = 0
+focus_mode = 0
 text = "Audio"
 flat = true
 __meta__ = {

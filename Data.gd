@@ -20,17 +20,23 @@ func _ready():
 
 	file = File.new()
 	file.open("res://Data/Translator.json", File.READ)
-	Translator = JSON.parse(file.get_as_text()).result
+	var test_json_conv = JSON.new()
+	test_json_conv.parse(file.get_as_text()).result
+	Translator = test_json_conv.get_data()
 	file.close()
 	
 	file = File.new()
 	file.open("res://Data/Properties.json", File.READ)
-	Properties = JSON.parse(file.get_as_text()).result
+	var test_json_conv = JSON.new()
+	test_json_conv.parse(file.get_as_text()).result
+	Properties = test_json_conv.get_data()
 	file.close()
 	
 	file = File.new()
 	file.open("res://Data/Permissions.json", File.READ)
-	Permissions = JSON.parse(file.get_as_text()).result
+	var test_json_conv = JSON.new()
+	test_json_conv.parse(file.get_as_text()).result
+	Permissions = test_json_conv.get_data()
 	file.close()
 
 

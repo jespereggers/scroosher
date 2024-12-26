@@ -23,7 +23,7 @@ format = 1
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 
-[node name="Norman" parent="Player/Texture/Players" index="0"]
+[node name="Norman" parent="Player/Texture2D/Players" index="0"]
 frame = 2
 
 [node name="Ship" parent="." instance=ExtResource( 7 )]
@@ -31,11 +31,11 @@ frame = 2
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="Interface" parent="UI" instance=ExtResource( 2 )]
-margin_top = 0.0
-margin_bottom = 0.0
+offset_top = 0.0
+offset_bottom = 0.0
 
 [node name="LeavePlanet" parent="UI" instance=ExtResource( 6 )]
-margin_top = 540.0
+offset_top = 540.0
 
 [node name="Ticks" type="Timer" parent="."]
 wait_time = 0.1

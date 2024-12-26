@@ -1,83 +1,252 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=30 format=3 uid="uid://qu7xmrxfrawj"]
 
-[ext_resource path="res://Map.gd" type="Script" id=1]
-[ext_resource path="res://Interface.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Player.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Textures/Planets/Planets.tres" type="TileSet" id=4]
-[ext_resource path="res://Textures/Astroids/Asteroids.tres" type="TileSet" id=5]
-[ext_resource path="res://Textures/Backgrounds/ParralaxBackground.jpg" type="Texture" id=6]
-[ext_resource path="res://Space.gd" type="Script" id=20]
-[ext_resource path="res://Textures/UI/Context/Land.png" type="Texture" id=21]
+[ext_resource type="Script" path="res://Map.gd" id="1"]
+[ext_resource type="PackedScene" path="res://Interface.tscn" id="2"]
+[ext_resource type="PackedScene" uid="uid://ba5fi8fb2utae" path="res://Player.tscn" id="3"]
+[ext_resource type="TileSet" path="res://Textures/Planets/Planets.tres" id="4"]
+[ext_resource type="TileSet" path="res://Textures/Astroids/Asteroids.tres" id="5"]
+[ext_resource type="Texture2D" uid="uid://bxyweednmxwj2" path="res://Textures/Backgrounds/ParralaxBackground.jpg" id="6"]
+[ext_resource type="Texture2D" uid="uid://cvx2861gb1yce" path="res://Player/Ships/Starter/Down/0.png" id="8_su02q"]
+[ext_resource type="Texture2D" uid="uid://xc1ifx0mvrt5" path="res://Player/Ships/Starter/Down/1.png" id="9_w6y0e"]
+[ext_resource type="Texture2D" uid="uid://ddmsid53kp5o6" path="res://Player/Ships/Starter/Down/2.png" id="10_cpe23"]
+[ext_resource type="Texture2D" uid="uid://dy2cpwkdasba6" path="res://Player/Ships/Starter/Left/0.png" id="11_sri3k"]
+[ext_resource type="Texture2D" uid="uid://ciojcjnauyoob" path="res://Player/Ships/Starter/Left/1.png" id="12_tlh2x"]
+[ext_resource type="Texture2D" uid="uid://c0xnydgvb5thn" path="res://Player/Ships/Starter/Left/2.png" id="13_eyt4w"]
+[ext_resource type="Texture2D" uid="uid://4oxflrtesems" path="res://Player/Ships/Starter/Right/0.png" id="14_34s70"]
+[ext_resource type="Texture2D" uid="uid://hyv7f0vvvg1x" path="res://Player/Ships/Starter/Right/1.png" id="15_uv8kx"]
+[ext_resource type="Texture2D" uid="uid://7kwaplnduju0" path="res://Player/Ships/Starter/Right/2.png" id="16_u60r0"]
+[ext_resource type="Texture2D" uid="uid://d13syq1cdrjgv" path="res://Player/Ships/Starter/Top/0.png" id="17_tw45p"]
+[ext_resource type="Texture2D" uid="uid://b8no0cc2qdb7b" path="res://Player/Ships/Starter/Top/1.png" id="18_iudv5"]
+[ext_resource type="Texture2D" uid="uid://c5mb0j0t1ett" path="res://Player/Ships/Starter/Top/2.png" id="19_pam0y"]
+[ext_resource type="Script" path="res://Space.gd" id="20"]
+[ext_resource type="Texture2D" uid="uid://c7gpns88pu6pg" path="res://Player/Player/Norman/Down/0.png" id="20_q4wdh"]
+[ext_resource type="Texture2D" uid="uid://wrxeak2aqvoi" path="res://Textures/UI/Context/Land.png" id="21"]
+[ext_resource type="Texture2D" uid="uid://ddmlv2xkbjd4h" path="res://Player/Player/Norman/Down/1.png" id="21_w0igc"]
+[ext_resource type="Texture2D" uid="uid://0mbc88i65osj" path="res://Player/Player/Norman/Left/0.png" id="22_6v8nm"]
+[ext_resource type="Texture2D" uid="uid://drds06765rpgx" path="res://Player/Player/Norman/Left/1.png" id="23_tqaa2"]
+[ext_resource type="Texture2D" uid="uid://dki44bm66p228" path="res://Player/Player/Norman/Right/0.png" id="24_ovh6v"]
+[ext_resource type="Texture2D" uid="uid://cieje6of55qsk" path="res://Player/Player/Norman/Right/1.png" id="25_qjdv6"]
+[ext_resource type="Texture2D" uid="uid://bt7xsdak0ap5t" path="res://Player/Player/Norman/Top/0.png" id="26_680pi"]
+
+[sub_resource type="SpriteFrames" id="2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_su02q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_w6y0e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_cpe23")
+}],
+"loop": true,
+"name": &"Down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_sri3k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_tlh2x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_eyt4w")
+}],
+"loop": true,
+"name": &"Left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_34s70")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_uv8kx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_u60r0")
+}],
+"loop": true,
+"name": &"Right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_tw45p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_iudv5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_pam0y")
+}],
+"loop": true,
+"name": &"Top",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("20_q4wdh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_w0igc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_q4wdh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_q4wdh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_q4wdh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_q4wdh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_q4wdh")
+}],
+"loop": true,
+"name": &"Down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("22_6v8nm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_tqaa2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_6v8nm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_6v8nm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_6v8nm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_6v8nm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_6v8nm")
+}],
+"loop": true,
+"name": &"Left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("24_ovh6v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_qjdv6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_ovh6v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_ovh6v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_ovh6v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_ovh6v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_ovh6v")
+}],
+"loop": true,
+"name": &"Right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("26_680pi")
+}],
+"loop": true,
+"name": &"Top",
+"speed": 5.0
+}]
 
 [node name="Space" type="Node2D"]
-script = ExtResource( 20 )
+script = ExtResource("20")
 
 [node name="Background" type="CanvasLayer" parent="."]
 layer = -1
 
 [node name="Color" type="ColorRect" parent="Background"]
-modulate = Color( 0.741176, 0.741176, 0.741176, 1 )
+modulate = Color(0.741176, 0.741176, 0.741176, 1)
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-color = Color( 0.0352941, 0.00392157, 0.121569, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+color = Color(0.0352941, 0.00392157, 0.121569, 1)
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 layer = -1
-follow_viewport_enable = true
+follow_viewport_enabled = true
 follow_viewport_scale = 0.1
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_mirroring = Vector2( 1041.7, 609 )
+motion_mirroring = Vector2(1041.7, 609)
 
-[node name="Space" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
-modulate = Color( 0.964706, 1, 0, 0.105882 )
-position = Vector2( 512.25, 299.298 )
-scale = Vector2( 0.406949, 0.380876 )
-texture = ExtResource( 6 )
+[node name="Space" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+modulate = Color(0.964706, 1, 0, 0.105882)
+position = Vector2(512.25, 299.298)
+scale = Vector2(0.406949, 0.380876)
+texture = ExtResource("6")
 
-[node name="Map" type="Navigation2D" parent="."]
-script = ExtResource( 1 )
+[node name="Map" type="Node2D" parent="."]
+script = ExtResource("1")
 
 [node name="Reload" type="Timer" parent="Map"]
 wait_time = 0.1
 autostart = true
 
 [node name="Asteroids" type="TileMap" parent="Map"]
-tile_set = ExtResource( 5 )
-cell_size = Vector2( 16, 16 )
-format = 1
+tile_set = ExtResource("5")
+format = 2
 
 [node name="Planets" type="TileMap" parent="Map"]
-tile_set = ExtResource( 4 )
-cell_size = Vector2( 32, 32 )
-cell_quadrant_size = 32
-format = 1
-tile_data = PoolIntArray( -2, 0, 0, -65535, 0, 0, 65533, 0, 0 )
+tile_set = ExtResource("4")
+rendering_quadrant_size = 32
+format = 2
 
-[node name="Land" type="Sprite" parent="Map"]
+[node name="Land" type="Sprite2D" parent="Map"]
 visible = false
-position = Vector2( -0.375067, 0.127084 )
-scale = Vector2( 0.638291, 0.609115 )
 z_index = 1
-texture = ExtResource( 21 )
+position = Vector2(-0.375067, 0.127084)
+scale = Vector2(0.638291, 0.609115)
+texture = ExtResource("21")
 
 [node name="Night" type="CanvasModulate" parent="Map"]
-color = Color( 0, 0, 0, 1 )
+color = Color(0, 0, 0, 1)
 
-[node name="Player" parent="." instance=ExtResource( 3 )]
+[node name="Player" parent="." instance=ExtResource("3")]
 
-[node name="Starter" parent="Player/Texture/Ships" index="0"]
+[node name="Starter" parent="Player/Texture2D/Ships" index="0"]
+sprite_frames = SubResource("2")
+animation = &"Top"
 frame = 1
 
-[node name="Norman" parent="Player/Texture/Players" index="0"]
+[node name="Norman" parent="Player/Texture2D/Players" index="0"]
+sprite_frames = SubResource("3")
+animation = &"Down"
 frame = 5
+
+[node name="Healthbar" parent="Player" index="5"]
+anchors_preset = 8
 
 [node name="Line" type="Line2D" parent="."]
 visible = false
-points = PoolVector2Array( 68.3623, 33.0362 )
+points = PackedVector2Array(68.3623, 33.0362)
 
 [node name="Ticks" type="Timer" parent="."]
 wait_time = 5.0
@@ -85,22 +254,88 @@ autostart = true
 
 [node name="UI" type="CanvasLayer" parent="."]
 
-[node name="Interface" parent="UI" instance=ExtResource( 2 )]
-margin_top = 0.0
-margin_bottom = 0.0
+[node name="Interface" parent="UI" instance=ExtResource("2")]
+layout_mode = 3
+anchors_preset = 15
+offset_top = 0.0
+offset_bottom = 0.0
+
+[node name="RightCounter" parent="UI/Interface" index="0"]
+layout_mode = 0
+
+[node name="Diamonds" parent="UI/Interface/RightCounter" index="0"]
+layout_mode = 2
+expand_mode = 1
+
+[node name="Count" parent="UI/Interface/RightCounter/Diamonds" index="0"]
+layout_mode = 0
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Glass" parent="UI/Interface/RightCounter" index="1"]
+layout_mode = 2
+expand_mode = 1
+
+[node name="Count" parent="UI/Interface/RightCounter/Glass" index="0"]
+layout_mode = 0
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Stone" parent="UI/Interface/RightCounter" index="2"]
+layout_mode = 2
+expand_mode = 1
+
+[node name="Count" parent="UI/Interface/RightCounter/Stone" index="0"]
+layout_mode = 0
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="LeftCounter" parent="UI/Interface" index="1"]
+layout_mode = 0
+
+[node name="Energy" parent="UI/Interface/LeftCounter" index="0"]
+layout_mode = 2
+expand_mode = 1
+
+[node name="Count" parent="UI/Interface/LeftCounter/Energy" index="0"]
+layout_mode = 0
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Icon" parent="UI/Interface/LeftCounter" index="1"]
+layout_mode = 2
+expand_mode = 1
 
 [node name="Pause" parent="UI/Interface" index="2"]
+layout_mode = 0
 anchor_right = 0.531
-margin_right = 0.255981
-margin_bottom = -4.956
+offset_right = 0.255981
+offset_bottom = -4.956
 
-[connection signal="CurrentPlanetChanged" from="." to="Map" method="_on_Space_CurrentPlanetChanged"]
-[connection signal="InventoryChanged" from="Map" to="UI/Interface" method="_on_Map_InventoryChanged"]
+[node name="ColorRect" parent="UI/Interface/PauseMenu" index="0"]
+anchors_preset = 15
+
+[node name="Back" parent="UI/Interface/PauseMenu" index="1"]
+anchors_preset = 8
+
+[node name="Title" parent="UI/Interface/PauseMenu" index="2"]
+anchors_preset = 8
+
+[node name="ColorRect" parent="UI/Interface/GameOver" index="0"]
+anchors_preset = 15
+
+[node name="GameOver" parent="UI/Interface/GameOver" index="1"]
+anchors_preset = 8
+
+[node name="Text" parent="UI/Interface/GameOver" index="2"]
+anchors_preset = 8
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [connection signal="timeout" from="Map/Reload" to="." method="_on_Reload_timeout"]
 [connection signal="timeout" from="Map/Reload" to="Map" method="_on_Reload_timeout"]
 [connection signal="DeleteTile" from="Player/Gun" to="Map" method="_on_Gun_DeleteTile"]
 [connection signal="timeout" from="Ticks" to="." method="_on_Ticks_timeout"]
-[connection signal="HealthChanged" from="UI/Interface" to="Player" method="_on_Interface_HealthChanged"]
 [connection signal="pressed" from="UI/Interface/Pause" to="Player" method="_on_Pause_pressed"]
 
 [editable path="Player"]

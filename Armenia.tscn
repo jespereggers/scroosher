@@ -23,7 +23,7 @@ format = 1
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 
-[node name="Norman" parent="Player/Texture/Players" index="0"]
+[node name="Norman" parent="Player/Texture2D/Players" index="0"]
 frame = 6
 
 [node name="Ship" parent="." instance=ExtResource( 7 )]

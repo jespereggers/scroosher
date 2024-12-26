@@ -1,4 +1,4 @@
-extends KinematicBody2D
+extends CharacterBody2D
 
 var Speed = 100
 var Velocity = Vector2()
@@ -7,11 +7,11 @@ var Player
 func _ready():
 	$Healthbar.value = Data.Inventory["Energy"]
 	if get_tree().current_scene.get_name() == "Space":
-		Player = get_node("Texture/Ships/Starter")
+		Player = get_node("Texture2D/Ships/Starter")
 		get_node("Gun").show()
 		Player.show()
 	else:
-		Player = get_node("Texture/Players/Norman")
+		Player = get_node("Texture2D/Players/Norman")
 		get_node("Gun").free()
 		Player.show()
 		
@@ -39,7 +39,9 @@ func movement():
 
 func _physics_process(_delta):
 	movement()
-	Velocity = move_and_slide(Velocity.normalized() * Speed)
+	set_velocity(Velocity.normalized() * Speed)
+	move_and_slide()
+	Velocity = velocity
 	Velocity = Vector2.ZERO 
 
 func _on_Interface_HealthChanged():

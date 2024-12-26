@@ -1,14 +1,14 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://LeavePlanet.gd" type="Script" id=1]
-[ext_resource path="res://Textures/UI/Context/Leave/2.png" type="Texture" id=2]
-[ext_resource path="res://Textures/UI/Context/Leave/0.png" type="Texture" id=3]
-[ext_resource path="res://Textures/UI/Context/Leave/1.png" type="Texture" id=4]
+[ext_resource path="res://Textures/UI/Context/Leave/2.png" type="Texture2D" id=2]
+[ext_resource path="res://Textures/UI/Context/Leave/0.png" type="Texture2D" id=3]
+[ext_resource path="res://Textures/UI/Context/Leave/1.png" type="Texture2D" id=4]
 
 [node name="LeavePlanet" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_top = 415.0
+offset_top = 415.0
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -19,11 +19,11 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-margin_left = -48.0
-margin_top = -47.0
-margin_right = 46.0
-margin_bottom = -5.0
-rect_min_size = Vector2( 82, 42 )
+offset_left = -48.0
+offset_top = -47.0
+offset_right = 46.0
+offset_bottom = -5.0
+custom_minimum_size = Vector2( 82, 42 )
 texture_normal = ExtResource( 3 )
 texture_pressed = ExtResource( 2 )
 texture_hover = ExtResource( 4 )

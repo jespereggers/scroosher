@@ -13,12 +13,12 @@ func _ready():
 func _on_Start_pressed():
 	if File.new().file_exists("user://Save.sc"):
 		Data.Load()
-		get_tree().change_scene(GetScene())
+		get_tree().change_scene_to_file(GetScene())
 
 func _on_New_pressed():
 	Save()
 	Data.Load()
-	get_tree().change_scene("res://Space.tscn")
+	get_tree().change_scene_to_file("res://Space.tscn")
 
 func Save():
 	var content : Dictionary

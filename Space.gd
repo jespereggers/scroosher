@@ -5,9 +5,9 @@ var pos : Vector2
 
 signal CurrentPlanetChanged(CurrentPlanet)
 
-onready var nav_2d : Navigation2D = $Map
-onready var line_2d : Line2D = $Line
-onready var Enemy : KinematicBody2D 
+@onready var nav_2d : Navigation2D = $Map
+@onready var line_2d : Line2D = $Line
+@onready var Enemy : CharacterBody2D 
 
 func _ready():
 	$Player.position = Data.Position
@@ -26,11 +26,11 @@ func _input(event):
 				if "Enemy" in node.get_name():
 					Data.Enemies[node.get_name()]["Position"] = node.position
 			
-			get_tree().change_scene("res://"+Data.NextScene+".tscn")
+			get_tree().change_scene_to_file("res://"+Data.NextScene+".tscn")
 
 func NewCellEntered():
-	if CurrentPlanet != $Map/Planets.world_to_map(get_global_mouse_position()):
-		CurrentPlanet = $Map/Planets.world_to_map(get_global_mouse_position())
+	if CurrentPlanet != $Map/Planets.local_to_map(get_global_mouse_position()):
+		CurrentPlanet = $Map/Planets.local_to_map(get_global_mouse_position())
 		emit_signal("CurrentPlanetChanged", CurrentPlanet)
 	else:
 		pass
@@ -40,13 +40,13 @@ func _on_Reload_timeout():
 
 func GenerateEnemy(pos):
 	var EnemyName = GetEnemyName()
-	Enemy = load("res://Enemy.tscn").instance()
+	Enemy = load("res://Enemy.tscn").instantiate()
 	Enemy.position = pos
 	Data.Enemies[EnemyName] = {"Position": pos,"Health": 100}
 	Enemy.set_name(EnemyName)
 	self.add_child(Enemy)
-	get_node(EnemyName).connect("BodyEntered", self, "GeneratePath")
-	get_node(EnemyName).get_node("Gun").connect("DeleteTile", $Map, "_on_Gun_DeleteTile")
+	get_node(EnemyName).connect("BodyEntered",Callable(self,"GeneratePath"))
+	get_node(EnemyName).get_node("Gun").connect("DeleteTile",Callable($Map,"_on_Gun_DeleteTile"))
 
 func GeneratePath(body):
 	var new_path : = nav_2d.get_simple_path(body.global_position, $Player.position)
@@ -63,17 +63,17 @@ func _on_Ticks_timeout():
 
 func LoadEnemies():
 	for keys in Data.Enemies:
-		Enemy = load("res://Enemy.tscn").instance()
+		Enemy = load("res://Enemy.tscn").instantiate()
 		Enemy.position = Data.Enemies[keys]["Position"]
 		Enemy.set_name(keys)
 		self.add_child(Enemy)
-		get_node(keys).connect("BodyEntered", self, "GeneratePath")
-		get_node(keys).get_node("Gun").connect("DeleteTile", $Map, "_on_Gun_DeleteTile")
+		get_node(keys).connect("BodyEntered",Callable(self,"GeneratePath"))
+		get_node(keys).get_node("Gun").connect("DeleteTile",Callable($Map,"_on_Gun_DeleteTile"))
 
 func SpawnEnemies():
 	print("I like "+str(randi())+" cookies")
-	pos.x = $Player.position.x + rand_range(-300, 300)
-	pos.y = $Player.position.y + rand_range(-300, 300)
+	pos.x = $Player.position.x + randf_range(-300, 300)
+	pos.y = $Player.position.y + randf_range(-300, 300)
 	if abs(pos.distance_to($Player.position)) > 100:
 		GenerateEnemy(pos)
 

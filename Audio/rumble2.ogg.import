@@ -1,15 +1,19 @@
 [remap]
 
-importer="ogg_vorbis"
-type="AudioStreamOGGVorbis"
-path="res://.import/rumble2.ogg-f5ac1fa9c2377525814d6b956cc895ca.oggstr"
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://lol1rm6fi8mu"
+path="res://.godot/imported/rumble2.ogg-f5ac1fa9c2377525814d6b956cc895ca.oggvorbisstr"
 
 [deps]
 
 source_file="res://Audio/rumble2.ogg"
-dest_files=[ "res://.import/rumble2.ogg-f5ac1fa9c2377525814d6b956cc895ca.oggstr" ]
+dest_files=["res://.godot/imported/rumble2.ogg-f5ac1fa9c2377525814d6b956cc895ca.oggvorbisstr"]
 
 [params]
 
 loop=true
 loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

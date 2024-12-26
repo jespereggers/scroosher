@@ -11,16 +11,16 @@ func _process(_delta):
 func Shoot():
 	if CanFire == true:
 		Audio.PlayLaser(get_parent().position)
-		var BulletInstance = Bullet.instance()
+		var BulletInstance = Bullet.instantiate()
 		BulletInstance.position = $BulletPoint.get_global_position()
 		BulletInstance.rotation_degrees = rotation_degrees
-		BulletInstance.apply_impulse(Vector2(),Vector2(500, 0).rotated(rotation))
+		BulletInstance.apply_impulse(Vector2(500, 0).rotated(rotation), Vector2())
 		BulletInstance.name += "ByEnemy"
 		get_tree().get_root().add_child(BulletInstance)
 		BulletInstance.add_to_group("Bullet", true)
 		
-		BulletInstance.connect("Collision", self, "GetCollision")
-		BulletInstance.connect("PlayerGotShot",get_parent().get_parent().get_node("Player"),"_on_SubstractTimer_timeout")
+		BulletInstance.connect("Collision",Callable(self,"GetCollision"))
+		BulletInstance.connect("PlayerGotShot",Callable(get_parent().get_parent().get_node("Player"),"_on_SubstractTimer_timeout"))
 		CanFire = false
 
 func GetCollision(tile, node, pos):

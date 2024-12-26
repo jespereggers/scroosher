@@ -1,8 +1,8 @@
 [gd_resource type="TileSet" load_steps=4 format=2]
 
-[ext_resource path="res://Textures/Ground/Sand_Block.png" type="Texture" id=1]
-[ext_resource path="res://Textures/Ground/Gras_Block.png" type="Texture" id=2]
-[ext_resource path="res://Textures/Ground/Ice_Block.png" type="Texture" id=3]
+[ext_resource path="res://Textures/Ground/Sand_Block.png" type="Texture2D" id=1]
+[ext_resource path="res://Textures/Ground/Gras_Block.png" type="Texture2D" id=2]
+[ext_resource path="res://Textures/Ground/Ice_Block.png" type="Texture2D" id=3]
 
 [resource]
 0/name = "Gras_Block.png 0"
